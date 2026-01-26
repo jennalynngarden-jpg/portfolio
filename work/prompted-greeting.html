@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompted Greeting | Jenna Garden</title>
+  <meta name="description" content="Case study: Personalized greetings from Microsoft Copilot.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Jenna Garden</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="../index.html" class="nav__link">About</a></li>
+        <li><a href="../work.html" class="nav__link nav__link--active">Work</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study">
+    <div class="container container--narrow">
+      <header class="case-study__header">
+        <div class="case-study__company">Microsoft AI</div>
+        <h1 class="case-study__title">Prompted greeting</h1>
+        <p>Designing personalized greetings from Copilot that adapt to user context, time of day, and ongoing conversations to create more natural AI interactions.</p>
+        <div class="case-study__meta">
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Role</span>
+            <span class="case-study__meta-value">Principal Content Designer</span>
+          </div>
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Team</span>
+            <span class="case-study__meta-value">Product, Design, Engineering</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="case-study__section">
+        <h2>Overview</h2>
+        <p>Case study content coming soon.</p>
+      </section>
+
+      <!-- Case Study Navigation -->
+      <nav class="case-study__nav">
+        <a href="deep-research.html">
+          <span class="case-study__nav-label">Previous</span>
+          <span class="case-study__nav-title">Deep research</span>
+        </a>
+        <a href="reminders.html">
+          <span class="case-study__nav-label">Next</span>
+          <span class="case-study__nav-title">Reminders</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <ul class="footer__links">
+          <li><a href="../index.html" class="footer__link">About</a></li>
+          <li><a href="../work.html" class="footer__link">Work</a></li>
+          <li><a href="../contact.html" class="footer__link">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+    });
+  </script>
+</body>
+</html>

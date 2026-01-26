@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jenna Garden</title>
+  <meta name="description" content="Get in touch with Jenna Garden, Principal Content Designer at Microsoft AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=13">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Jenna Garden</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">About</a></li>
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <main class="contact">
+    <div class="container">
+      <div class="contact__layout">
+        <img src="images/contact.jpg" alt="Jenna Garden" class="contact__image">
+        <div class="contact__content">
+          <div class="contact__gradient"></div>
+          <h1 class="contact__title">Let's connect?</h1>
+          <p class="contact__text">I love new friends—almost as much as I love my cat, Zelda. The best way to reach me is through LinkedIn.</p>
+          <a href="https://www.linkedin.com/in/jennagarden/" class="contact__link" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">About</a></li>
+          <li><a href="work.html" class="footer__link">Work</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+    });
+
+    // Delayed gradient follows mouse (directional, constrained to center)
+    const gradient = document.querySelector('.contact__gradient');
+
+    if (gradient) {
+      let targetX = 50;
+      let targetY = 50;
+      let currentX = 50;
+      let currentY = 50;
+
+      document.addEventListener('mousemove', (e) => {
+        // Convert mouse position to percentage
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+
+        // Constrain to center region (30-70% range for noticeable but contained movement)
+        targetX = 30 + ((x / 100) * 40);
+        targetY = 30 + ((y / 100) * 40);
+      });
+
+      // Smooth delayed animation loop
+      function animate() {
+        // Ease toward target (lower number = more delay)
+        currentX += (targetX - currentX) * 0.03;
+        currentY += (targetY - currentY) * 0.03;
+
+        gradient.style.setProperty('--mouse-x', `${currentX}%`);
+        gradient.style.setProperty('--mouse-y', `${currentY}%`);
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Jenna Garden</title>
+  <meta name="description" content="Case studies in UX content design from Robinhood, Airtable, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Jenna Garden</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">About</a></li>
+        <li><a href="work.html" class="nav__link nav__link--active">Work</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Work Grid -->
+  <main class="section" style="padding-top: 8rem;">
+    <div class="container">
+      <div class="work-header">
+        <h1>Work</h1>
+        <div class="filter-chips">
+        <button class="filter-chip filter-chip--active" data-filter="all">ALL</button>
+        <button class="filter-chip" data-filter="ai">AI</button>
+        <button class="filter-chip" data-filter="fintech">FINTECH</button>
+        <button class="filter-chip" data-filter="enterprise">ENTERPRISE</button>
+        <button class="filter-chip" data-filter="consumer">CONSUMER</button>
+        <button class="filter-chip" data-filter="growth">GROWTH</button>
+        <button class="filter-chip" data-filter="prompting">PROMPTING</button>
+        <button class="filter-chip" data-filter="content-systems">CONTENT SYSTEMS</button>
+        </div>
+      </div>
+
+      <div class="work-grid">
+        <!-- Case Study 1: Growing Robinhood Gold -->
+        <a href="work/robinhood-gold.html" class="work-card" data-tags="fintech,growth">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-gold-growth.png" alt="Growing Robinhood Gold">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">GROWTH</span>
+            </div>
+            <h2 class="work-card__title">Growing Robinhood Gold</h2>
+            <p class="work-card__description">Designing growth experiments to increase Gold subscribers and deposits.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 2: New Pricing and Migrations -->
+        <a href="work/pricing-migrations.html" class="work-card" data-tags="enterprise,growth">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-plan-migrations.png" alt="New pricing and migrations">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Airtable</span>
+              <span class="work-card__tag">ENTERPRISE</span>
+              <span class="work-card__tag">GROWTH</span>
+            </div>
+            <h2 class="work-card__title">New pricing and migrations</h2>
+            <p class="work-card__description">Pricing strategy updates and user transition experiences.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 3: Enterprise Hub -->
+        <a href="work/enterprise-hub.html" class="work-card" data-tags="enterprise,content-systems">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-enterprise-hub.png" alt="Enterprise hub">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Airtable</span>
+              <span class="work-card__tag">ENTERPRISE</span>
+              <span class="work-card__tag">CONTENT SYSTEMS</span>
+            </div>
+            <h2 class="work-card__title">Enterprise Hub</h2>
+            <p class="work-card__description">Admin surfaces and taxonomy for enterprise customers.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 4: First Trade Recommendations -->
+        <a href="work/first-trade.html" class="work-card" data-tags="fintech,consumer">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-first-trade-recs.png" alt="First trade recommendations">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">First trade recommendations</h2>
+            <p class="work-card__description">Helping new investors make their first investment decision.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 5: Recommendations for Retirement -->
+        <a href="work/retirement.html" class="work-card" data-tags="fintech,consumer">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-retirement-recs.png" alt="Recommendations for retirement">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Recommendations for retirement</h2>
+            <p class="work-card__description">Retirement-specific investment guidance and recommendations.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 6: Onboarding Redesign -->
+        <a href="work/onboarding.html" class="work-card" data-tags="fintech,growth,consumer">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-onboarding-redesign.png" alt="Onboarding redesign">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">GROWTH</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Onboarding redesign</h2>
+            <p class="work-card__description">Improving the user signup and first-time experience.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 7: Crypto Recurring Investments -->
+        <a href="work/crypto-recurring.html" class="work-card" data-tags="fintech,consumer">
+          <div class="work-card__image">
+            <!-- Replace with: images/crypto-recurring-thumb.jpg -->
+            <span>crypto-recurring-thumb.jpg</span>
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Crypto recurring investments</h2>
+            <p class="work-card__description">Automated cryptocurrency investment features.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 8: Growing Recurring Investments -->
+        <a href="work/recurring-investments.html" class="work-card" data-tags="fintech,consumer,growth">
+          <div class="work-card__image">
+            <!-- Replace with: images/recurring-investments-thumb.jpg -->
+            <span>recurring-investments-thumb.jpg</span>
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Robinhood</span>
+              <span class="work-card__tag">FINTECH</span>
+              <span class="work-card__tag">CONSUMER</span>
+              <span class="work-card__tag">GROWTH</span>
+            </div>
+            <h2 class="work-card__title">Growing recurring investments</h2>
+            <p class="work-card__description">Expanding automated investment capabilities.</p>
+          </div>
+        </a>
+
+        <!-- Case Study 9: Deep Research -->
+        <a href="work/deep-research.html" class="work-card" data-tags="ai,consumer">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-deep-research.png" alt="Deep research">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Deep research</h2>
+            <p class="work-card__description">Designing agentic research capabilities</p>
+          </div>
+        </a>
+
+        <!-- Case Study 10: Prompted Greeting -->
+        <a href="work/prompted-greeting.html" class="work-card" data-tags="ai,prompting,consumer">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-prompted-greeting.png" alt="Prompted greeting">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">PROMPTING</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Prompted greeting</h2>
+            <p class="work-card__description">Personalized greetings from Copilot</p>
+          </div>
+        </a>
+
+        <!-- Case Study 11: Reminders -->
+        <a href="work/reminders.html" class="work-card" data-tags="ai,prompting,consumer">
+          <div class="work-card__image">
+            <span>reminders-thumb.jpg</span>
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">PROMPTING</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Reminders</h2>
+            <p class="work-card__description">Dynamic reminders from Copilot</p>
+          </div>
+        </a>
+
+        <!-- Case Study 12: Low Intent Patch -->
+        <a href="work/low-intent-patch.html" class="work-card" data-tags="ai,prompting">
+          <div class="work-card__image">
+            <img src="images/work-card-images/work-card-low-intent.png" alt="Low intent patch">
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">PROMPTING</span>
+            </div>
+            <h2 class="work-card__title">Low intent patch</h2>
+            <p class="work-card__description">Teaching Copilot to ask more clarifying questions</p>
+          </div>
+        </a>
+
+        <!-- Case Study 13: Product Safety -->
+        <a href="work/product-safety.html" class="work-card" data-tags="ai,consumer">
+          <div class="work-card__image">
+            <span>product-safety-thumb.jpg</span>
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">CONSUMER</span>
+            </div>
+            <h2 class="work-card__title">Product safety</h2>
+            <p class="work-card__description">Compliance and teen safety UX in Copilot</p>
+          </div>
+        </a>
+
+        <!-- Case Study 14: Content Design System -->
+        <a href="work/content-design-system.html" class="work-card" data-tags="ai,consumer,content-systems">
+          <div class="work-card__image">
+            <span>content-design-system-thumb.jpg</span>
+          </div>
+          <div class="work-card__content">
+            <div class="work-card__meta">
+              <span class="work-card__company">Microsoft AI</span>
+              <span class="work-card__tag">AI</span>
+              <span class="work-card__tag">CONSUMER</span>
+              <span class="work-card__tag">CONTENT SYSTEMS</span>
+            </div>
+            <h2 class="work-card__title">Content design system</h2>
+            <p class="work-card__description">Scaling content design with AI tooling</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">About</a></li>
+          <li><a href="work.html" class="footer__link">Work</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+    });
+
+    // Filter functionality with FLIP animation and section headers
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const workGrid = document.querySelector('.work-grid');
+    const workCards = Array.from(document.querySelectorAll('.work-card'));
+
+    // Company order and section headers
+    const companyOrder = ['Microsoft AI', 'Robinhood', 'Airtable'];
+    const sectionHeaders = {};
+
+    // Create section header elements
+    companyOrder.forEach(company => {
+      const section = document.createElement('div');
+      section.className = 'work-section';
+      section.innerHTML = `<h2 class="work-section__header">${company}</h2>`;
+      sectionHeaders[company] = section;
+    });
+
+    // Get company from card
+    const getCompany = (card) => {
+      const el = card.querySelector('.work-card__company');
+      return el ? el.textContent.trim() : '';
+    };
+
+    // Sort by company order
+    const sortByCompany = (cards) => {
+      return [...cards].sort((a, b) => {
+        const aIndex = companyOrder.indexOf(getCompany(a));
+        const bIndex = companyOrder.indexOf(getCompany(b));
+        return aIndex - bIndex;
+      });
+    };
+
+    // Initialize with "All" view
+    const initializeSections = () => {
+      const sorted = sortByCompany(workCards);
+      let currentCompany = null;
+
+      sorted.forEach(card => {
+        const company = getCompany(card);
+        if (company !== currentCompany) {
+          currentCompany = company;
+          if (sectionHeaders[company]) {
+            workGrid.appendChild(sectionHeaders[company]);
+          }
+        }
+        workGrid.appendChild(card);
+      });
+    };
+
+    initializeSections();
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        // Update active chip
+        filterChips.forEach(c => c.classList.remove('filter-chip--active'));
+        chip.classList.add('filter-chip--active');
+
+        const filter = chip.dataset.filter;
+        const isAll = filter === 'all';
+
+        // FIRST: Record current positions before any changes
+        const firstPositions = new Map();
+        workCards.forEach(card => {
+          const rect = card.getBoundingClientRect();
+          firstPositions.set(card, { x: rect.left, y: rect.top });
+        });
+
+        // Separate matching and non-matching
+        const matching = [];
+        const nonMatching = [];
+
+        workCards.forEach(card => {
+          if (isAll) {
+            matching.push(card);
+          } else {
+            const tags = card.dataset.tags.split(',');
+            if (tags.includes(filter)) {
+              matching.push(card);
+            } else {
+              nonMatching.push(card);
+            }
+          }
+        });
+
+        // Sort cards
+        const sortedMatching = sortByCompany(matching);
+        const sortedNonMatching = sortByCompany(nonMatching);
+
+        // Reorder DOM with or without section headers
+        if (isAll) {
+          // Show headers and insert with section headers
+          let currentCompany = null;
+          sortedMatching.forEach(card => {
+            const company = getCompany(card);
+            if (company !== currentCompany) {
+              currentCompany = company;
+              if (sectionHeaders[company]) {
+                sectionHeaders[company].classList.remove('work-section--hidden');
+                workGrid.appendChild(sectionHeaders[company]);
+              }
+            }
+            card.classList.remove('work-card--faded');
+            workGrid.appendChild(card);
+          });
+        } else {
+          // Hide headers first, then reorder cards
+          Object.values(sectionHeaders).forEach(section => {
+            section.classList.add('work-section--hidden');
+          });
+
+          sortedMatching.forEach(card => {
+            card.classList.remove('work-card--faded');
+            workGrid.appendChild(card);
+          });
+          sortedNonMatching.forEach(card => {
+            card.classList.add('work-card--faded');
+            workGrid.appendChild(card);
+          });
+        }
+
+        // LAST: Get new positions and INVERT
+        workCards.forEach(card => {
+          const first = firstPositions.get(card);
+          const last = card.getBoundingClientRect();
+          const deltaX = first.x - last.left;
+          const deltaY = first.y - last.top;
+
+          // Apply inverse transform (no transition yet)
+          card.style.transition = 'none';
+          card.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+
+        // PLAY: Animate to final position
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            workCards.forEach(card => {
+              card.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease';
+              card.style.transform = '';
+            });
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

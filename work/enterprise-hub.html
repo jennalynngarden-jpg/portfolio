@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Hub | Jenna Garden</title>
+  <meta name="description" content="Case study: Product naming, taxonomy creation, and admin surfaces for Airtable's enterprise customers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Jenna Garden</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="../index.html" class="nav__link">About</a></li>
+        <li><a href="../work.html" class="nav__link nav__link--active">Work</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study">
+    <div class="container container--narrow">
+      <header class="case-study__header">
+        <div class="case-study__company">Airtable</div>
+        <h1 class="case-study__title">Enterprise Hub</h1>
+        <p>I led several naming workstreams, created an account structure taxonomy, and partnered with product design to think through navigation, terminology, and IA for an expanded version of the Airtable admin panel that enabled scaled administration at large organizations.</p>
+        <div class="case-study__meta">
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Role</span>
+            <span class="case-study__meta-value">Content Design</span>
+          </div>
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Team</span>
+            <span class="case-study__meta-value">Product Design, Engineering, PM, Marketing</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="case-study__section">
+        <h2>Problem</h2>
+        <p>Large enterprise customers faced administration challenges. The existing "organization" account structure wasn't robust enough, forcing customers to either create multiple organizations (management burden) or consolidate everything (visibility issues for some admins).</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Solution</h2>
+        <p>Enterprise Hub introduced new account structures and administrative control levels, inspired by Slack's Enterprise Grid model. The feature enables:</p>
+        <ul>
+          <li>Scalable administration for large organizations</li>
+          <li>Delegation of responsibilities to line-of-business owners</li>
+          <li>Standardized settings enforcement</li>
+          <li>Uniform security policies</li>
+        </ul>
+      </section>
+
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+
+        <h3>Product naming</h3>
+        <p>When I joined the project, the working name for the feature was "Enterprise Grid," as we were modeling it after Slack's offering. However, this was creating a lot of confusion on the team because folks were using "grid" to refer to both the new account structure we were introducing and the overall feature name (i.e. "With Enterprise Grid, you'll be able to have a grid that contains multiple organizations.").</p>
+        <p>Because "grid" is not an intuitive term, I assembled a thorough competitive audit, led namestorms with key stakeholders, and ran UserZoom validation studies. After presenting proposals to product leadership, we landed on:</p>
+        <ul>
+          <li><strong>Organizational units</strong> as the new account structure</li>
+          <li><strong>Enterprise Hub</strong> as the feature name, to emphasize the centralization value prop</li>
+        </ul>
+        <p>This preserved 2 out of the 3 of our existing account structure terms while aligning with competitors.</p>
+
+        <div class="case-study__centered-image">
+          <img src="../images/enterprise-hub/grid-account-structures.png" alt="Account structure comparison">
+          <p class="case-study__image-caption">Most competitors used the term "workspace" as the second layer of the account structure, but it would've been too much change management for us to mirror that because of the existing meaning that "workspace" had in Airtable (it's the primary billing unit for self-serve paid plans). I also pushed to keep "organization" as the top layer account structure so it wouldn't have a plan-dependent definition—customers would "unlock" an additional account structure that sat below an "organization" instead of having the definition of "organization" change.</p>
+        </div>
+
+        <h3>Expanded admin panel</h3>
+        <p>I partnered with Product Design to introduce contextual info display based on an admin's scope (super admin at organization level or org unit admin). This included:</p>
+        <ul>
+          <li>Net-new Organization page for super admins (central IT users who needed full visibility)</li>
+          <li>Nav redesign to support the introduction of org units</li>
+          <li>Clear and guided user administration flows</li>
+        </ul>
+
+        <h4>Key content considerations</h4>
+        <div class="content-columns">
+          <div class="content-column">
+            <div class="content-column__header">Contextual scope cues</div>
+            <div class="content-column__text">The info on any given page was contextual depending on the scope (organization vs. org unit) that the super admin had selected. I aimed to consistently reinforce that in helper text.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Super admin clarity</div>
+            <div class="content-column__text">Defining the actions that super admins could take on users was tricky, and there was legacy code that created nuances with our existing actions. I advocated for always clarifying user admin actions in confirmation dialogs.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Naming the purgatory</div>
+            <div class="content-column__text">I proposed and tested (via UserZoom) different names for what I ultimately dubbed the "unassigned org unit"—an important conceptual holding ground for users and workspaces that didn't have an org unit yet.</div>
+          </div>
+        </div>
+
+        <!-- Desktop Design Carousel -->
+        <div class="monitor-carousel" id="admin-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen">
+              <img src="../images/enterprise-hub/01-organization-page.png" alt="Design screen" class="monitor-carousel__image">
+            </div>
+          </div>
+          <div class="monitor-carousel__caption">
+            <p class="monitor-carousel__caption-text"><strong>Screen title:</strong> Add caption for this screen.</p>
+          </div>
+          <div class="monitor-carousel__controls">
+            <div class="monitor-carousel__dots"></div>
+            <div class="monitor-carousel__arrows">
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <h3>Settings redesign</h3>
+        <p>I partnered with Product Design to redesign admin panel settings to support centrally-configured global settings and inherited defaults for org units. This included:</p>
+        <ul>
+          <li>New settings nav paradigm to add settings detail pages</li>
+          <li>New settings tab IA and setting descriptions to scrub inconsistent and opaque terminology</li>
+          <li>New SME review process for future settings updates</li>
+        </ul>
+
+        <h4>Key content considerations</h4>
+        <div class="content-columns">
+          <div class="content-column">
+            <div class="content-column__header">Inheritance control terminology</div>
+            <div class="content-column__text">One of the settings we offered for super admins was the ability to "lock down" a particular setting so org unit admins couldn't edit it for their respective org units. I had heard IT admins use the verb "lock" when talking about settings in various customer calls, so I tested it in a UserZoom study and ultimately used it in our final designs, despite some pushback from internal stakeholders.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Establishing content patterns</div>
+            <div class="content-column__text">Enterprise Hub overall led me to develop stronger content patterns in the admin panel, and settings was one of the places where this showed up more clearly. I aimed to use the same set of verbs and parallel sentence structures across settings that behaved similarly.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Platform team processes</div>
+            <div class="content-column__text">Several other teams were touching the admin panel and adding settings, but they were doing so with no design guidance, which is what resulted in settings looking and sounding so inconsistent. I created documentation for other designers to help them write settings product copy and instituted an intake process that would allow them to request input from me and my product design partner.</div>
+          </div>
+        </div>
+
+        <!-- Settings Design Carousel -->
+        <div class="monitor-carousel" id="settings-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen">
+              <img src="../images/enterprise-hub/placeholder.png" alt="Design screen" class="monitor-carousel__image">
+            </div>
+          </div>
+          <div class="monitor-carousel__caption">
+            <p class="monitor-carousel__caption-text"><strong>Screen title:</strong> Add caption for this screen.</p>
+          </div>
+          <div class="monitor-carousel__controls">
+            <div class="monitor-carousel__dots"></div>
+            <div class="monitor-carousel__arrows">
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Outcomes</h2>
+        <p>Note that I don't have a lot of specific metrics from this launch, as we started to roll it out to customers late Aug 2023 and I was laid off mid-Sept 2023.</p>
+
+        <div class="content-columns">
+          <div class="content-column">
+            <div class="content-column__header">Received positive feedback from key beta customers</div>
+            <div class="content-column__text">We only onboarded 6 beta customers onto Hub before I departed from Airtable, but they were able to migrate onto the feature and set it up with no major UX issues.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Scrubbed risky terminology from the product</div>
+            <div class="content-column__text">Aligning our account structure terms upfront meant that we could reference our account structures throughout the admin panel clearly and accurately.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Made admin panel more cohesive</div>
+            <div class="content-column__text">During this project, my admin panel content standards and patterns helped unify the different admin panel pages and made the content across them more connected and clear for our most valuable customers.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study Navigation -->
+      <nav class="case-study__nav">
+        <a href="pricing-migrations.html">
+          <span class="case-study__nav-label">Previous</span>
+          <span class="case-study__nav-title">New Pricing and Migrations</span>
+        </a>
+        <a href="first-trade.html">
+          <span class="case-study__nav-label">Next</span>
+          <span class="case-study__nav-title">First Trade Recommendations</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <ul class="footer__links">
+          <li><a href="../index.html" class="footer__link">About</a></li>
+          <li><a href="../work.html" class="footer__link">Work</a></li>
+          <li><a href="../contact.html" class="footer__link">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+    });
+
+    // Monitor Carousel Data
+    const adminScreens = [
+      {
+        image: '../images/enterprise-hub/01-organization-page.png',
+        title: 'Organization page',
+        description: 'Net-new page that we added just for super admins. I helped determine what org unit metadata would be important to show here. We had plans to test this post-launch.'
+      },
+      {
+        image: '../images/enterprise-hub/02-create-org-unit-dialog.png',
+        title: 'Create org unit dialog',
+        description: 'Customers were going to be using org units to represent a variety of sub-groups within their organizations, so I tried to reflect that in this subheader copy.'
+      },
+      {
+        image: '../images/enterprise-hub/03-super-admin-users.png',
+        title: 'Super admin - Users',
+        description: 'Where a super admin can see all users in the organization. Because license management is a core admin workflow, we preserved the large license counts at the top of the page. We also used inline badges to represent special user types, like admins and external users.'
+      },
+      {
+        image: '../images/enterprise-hub/04-screenshot-1.png',
+        title: 'Users page column tooltips',
+        description: 'The info in the various columns on the Users page was aggregated across all org units, so I aimed to make that clear. This was most important in the seat type tooltip, as updating a user's seat type on this page updated it across all org units.',
+        noBezel: true
+      },
+      {
+        image: '../images/enterprise-hub/05-screenshot-2.png',
+        title: 'User admin actions',
+        description: 'Defining the actions a super admin could take on different types of users was actually quite tricky. Remove access and deactivate, for example, are two similar but distinct actions—"remove access" unshares the user from all org-owned resources, whereas "deactivate" keeps them shared on org-owned content, but locks them out of their account.',
+        noBezel: true
+      },
+      {
+        image: '../images/enterprise-hub/06-screenshot-3.png',
+        title: 'User action confirmation dialogs',
+        description: ' Because we had so many user administration actions and some of them sounded similar, it was important to spell out explicitly in confirmation dialogs what it meant to take a particular action. This deactivation dialog was one of the more complex ones, as I pushed for us to give super admins the option (via a checkbox) to remove deactivated users' access to org-owned content. ',
+        noBezel: true
+      },
+      {
+        image: '../images/enterprise-hub/07-org-unit-users.png',
+        title: 'Org unit users page',
+        description: 'If a super admin selected a particular org unit, we'd reflect that selection in the left nav. This selection applied to all pages in the left nav. In partnership with product design, I iterated through several different options for this navigation paradigm but ultimately landed on this one, which was the most simple. '
+      },
+      {
+        image: '../images/enterprise-hub/08-org-workspaces.png',
+        title: 'Super admin - Workspaces',
+        description: 'I pushed for grouping workspaces onto different tabs based on the actions a super admin might want to take on them. For workspaces that already that belong to the org and are assigned to an org unit, there's no action. For workspaces in the unassigned org unit, super admins needed to go assign them to the correct org unit. And then for workspaces that belonged to org members but were external to the organization, super admins may want to upgrade them to our enterprise plan to be able to manage them.'
+      }
+    ];
+
+    const settingsScreens = [
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 1',
+        description: 'Add caption for this screen.'
+      },
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 2',
+        description: 'Add caption for this screen.'
+      },
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 3',
+        description: 'Add caption for this screen.'
+      },
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 4',
+        description: 'Add caption for this screen.'
+      },
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 5',
+        description: 'Add caption for this screen.'
+      },
+      {
+        image: '../images/enterprise-hub/placeholder.png',
+        title: 'Settings screen 6',
+        description: 'Add caption for this screen.'
+      }
+    ];
+
+    // Monitor Carousel functionality
+    function initMonitorCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const deviceEl = carousel.querySelector('.monitor-carousel__device');
+      const imageEl = carousel.querySelector('.monitor-carousel__image');
+      const captionEl = carousel.querySelector('.monitor-carousel__caption-text');
+      const dotsContainer = carousel.querySelector('.monitor-carousel__dots');
+      const prevBtn = carousel.querySelector('.monitor-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.monitor-carousel__arrow--next');
+
+      // Generate dots
+      dotsContainer.innerHTML = screens.map((_, i) =>
+        `<button class="monitor-carousel__dot ${i === 0 ? 'monitor-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
+      ).join('');
+
+      const dots = dotsContainer.querySelectorAll('.monitor-carousel__dot');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Toggle bezel
+        deviceEl.classList.toggle('monitor-carousel__device--no-bezel', !!screen.noBezel);
+
+        // Update caption (single line with title: description format)
+        captionEl.innerHTML = `<strong>${screen.title}:</strong> ${screen.description}`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('monitor-carousel__dot--active', i === currentIndex);
+        });
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Initialize carousels
+    initMonitorCarousel('admin-carousel', adminScreens);
+    initMonitorCarousel('settings-carousel', settingsScreens);
+  </script>
+</body>
+</html>

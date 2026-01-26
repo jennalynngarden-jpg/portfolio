@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low Intent Patch | Jenna Garden</title>
+  <meta name="description" content="Case study: Teaching Copilot to ask more clarifying questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Jenna Garden</a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="../index.html" class="nav__link">About</a></li>
+        <li><a href="../work.html" class="nav__link nav__link--active">Work</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Case Study Content -->
+  <main class="case-study">
+    <div class="container container--narrow">
+      <header class="case-study__header">
+        <div class="case-study__company">Microsoft AI</div>
+        <h1 class="case-study__title">Low intent patch</h1>
+        <p>Teaching Copilot to ask more clarifying questions when user intent is ambiguous, improving conversational depth and retention.</p>
+        <div class="case-study__meta">
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Role</span>
+            <span class="case-study__meta-value">Prompt Engineer</span>
+          </div>
+          <div class="case-study__meta-item">
+            <span class="case-study__meta-label">Team</span>
+            <span class="case-study__meta-value">Product, Backend</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="case-study__section">
+        <h2>Problem</h2>
+        <p>30% of Copilot's weekly active users only sent one message. Log inspection showed that these users would often churn because their initial "low intent" queries—vague fragments like "marketing plan" or single words like "email"—force the model to guess, leading to a poor first experience. Week 1 retention was 8% on web and 14% on Windows.
+        <p>We also had qualitative UXR suggesting that users expect Copilot to demonstrate "conversational leadership" by guiding interactions toward meaningful outcomes.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Solution</h2>
+        <p>We needed to teach Copilot to be better at recognizing low intent queries and asking clarifying questions to give more tailored answers. We knew that if users followed up in the same conversation after their initial message, they were more likely to come back for a second session and retain the following week. Week 1 retention for users who sent multiple messages in their initial session was 14% overall, as opposed to 5% for single-message users.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+
+        <h3>Prompt engineering</h3>
+        <p>I owned prompt engineering and evals E2E for this patch. First, I started with log inspection to build a data set to run evals over. Because user logs are sensitive, I created a synthetic data set of low intent queries based on broad themes I saw during log inspection, including:</p>
+        <ul>
+          <li><strong>Vague verbs:</strong> "fix," "make it better"</li>
+          <li><strong>Fragmented phrases:</strong> "social media strategy", email template"</li>
+          <li><strong>Missing objects:</strong> "summarize," "create an image of"</li>
+          <li><strong>Incomplete suggestion chip prefill:</strong> At the time, we showed suggestion chips beneath the composer that would populate the composer with a partially-prefilled query that users could complete (i.e. "Help me draft an email to "). Many users would not realize these queries were incomplete and send them as-is.</li>
+        </ul>
+        <p>I also included negative cases (i.e. "How tall is Mount Everest?") that wouldn't require clarification. After I built the dataset, I then wrote a scorer prompt that 1) determined whether clarification was necessary based on the context and 2) graded outputs on these facets:</p>
+        <ul>
+          <li><strong>Lack of guessing:</strong> The model doesn't try to invent specifics or make assumptions about missing details.</li>
+          <li><strong>Lack of generic filler</strong> The model is concise and purposeful, omitting boilerplate language like "Let me know more" or "I'm here to help."</li>
+          <li><strong>Clarifying questions:</strong> The model asks specific and relevant clarifying questions.</li>
+          <li><strong>Concrete examples</strong> If helpful, the model provides 1-2 specific examples demonstrating how different details would lead to different outcomes.</li>
+        </ul>
+    
+        <div class="case-study__centered-image">
+          <img src="../images/low-intent/low-intent-evals.png" alt="Screenshot of eval output for this patch">
+          <p class="case-study__image-caption">I ran machine evals with my scorer and data set in Braintrust.</p>
+        </div>
+
+        <p>~55% was our control without this patch, so nearly <strong>73%</strong> was a significant improvement. We observed no significant regressions on leaderboard evals as well, aside from some regressions when it came to memory recall, suggesting that this patch somehow reduced the likelihood of the model searching over memory. We noted this as a non-blocking risk and still ran the experiment.</p>
+
+        <h4>Outputs</h4>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Before</th>
+              <th>Competitor</th>
+              <th>After</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-1-before.PNG" alt="Before: Row 1">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-1-competitor.PNG" alt="Competitor: Row 1">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-1-after.PNG" alt="After: Row 1">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-2-before.PNG" alt="Before: Row 2">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-2-competitor.png" alt="Competitor: Row 2">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-2-after.PNG" alt="After: Row 2">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-3-before.PNG" alt="Before: Row 3">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-3-competitor.png" alt="Competitor: Row 3">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="comparison-table__zoom-trigger">
+                  <img src="../images/low-intent/table-images/row-3-after.PNG" alt="After: Row 3">
+                  <div class="comparison-table__zoom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Stakeholder management</h3>
+        <p>This was a challenging patch to get approved by our internal prompt reviewers because, at the time, the org was in a GPU crunch. The initial placement in our responding model prompt that I proposed would've complicated how we were caching the prompt, so I had to experiment with more token-optimized placements, rework the patch, and rerun evals in the span of a few days to make a code freeze deadline.</p>
+        <p>In the end, I was able to find a placement that still maintained the same improvements and worked with the constraints from our Response Quality team.</p>
+
+        <section class="case-study__section">
+        <h2>Outcomes</h2>
+        <p>This patch was one of only 5 experiments that was able to move 7+ day retention during that cycle (7 weeks), a notoriously tough metric to move.</p>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">+0.16%</div>
+          <div class="outcome-box__label">Users with 3+ user-composed messages</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">+0.54%</div>
+          <div class="outcome-box__label">Users retained on day 7</div>
+        </div>
+
+        <p>Because of the scale of Copilot, even small stat-sig movements like this are considered big wins. The success of this patch demonstrated that Growth teams could drive business impact through prompt engineering and helped our team gain credibility in the org.</p>
+
+      <!-- Case Study Navigation -->
+      <nav class="case-study__nav">
+        <a href="reminders.html">
+          <span class="case-study__nav-label">Previous</span>
+          <span class="case-study__nav-title">Reminders</span>
+        </a>
+        <a href="product-safety.html">
+          <span class="case-study__nav-label">Next</span>
+          <span class="case-study__nav-title">Product safety</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="imageLightbox">
+    <button class="lightbox__close" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <img class="lightbox__image" src="" alt="Enlarged view">
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+    <div class="lightbox__counter">1 of 9</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <ul class="footer__links">
+          <li><a href="../index.html" class="footer__link">About</a></li>
+          <li><a href="../work.html" class="footer__link">Work</a></li>
+          <li><a href="../contact.html" class="footer__link">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav__links--open');
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = lightbox.querySelector('.lightbox__image');
+    const lightboxCounter = lightbox.querySelector('.lightbox__counter');
+    const lightboxClose = lightbox.querySelector('.lightbox__close');
+    const lightboxPrev = lightbox.querySelector('.lightbox__nav--prev');
+    const lightboxNext = lightbox.querySelector('.lightbox__nav--next');
+    const zoomTriggers = document.querySelectorAll('.comparison-table__zoom-trigger');
+
+    let currentIndex = 0;
+    const triggers = Array.from(zoomTriggers);
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.add('lightbox--open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--open');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const trigger = triggers[currentIndex];
+      const img = trigger.querySelector('img');
+      if (img) {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || 'Enlarged view';
+      } else {
+        // Placeholder - show empty state
+        lightboxImage.src = '';
+        lightboxImage.alt = 'Placeholder image';
+      }
+      lightboxCounter.textContent = `${currentIndex + 1} of ${triggers.length}`;
+    }
+
+    function goToPrev() {
+      currentIndex = (currentIndex - 1 + triggers.length) % triggers.length;
+      updateLightbox();
+    }
+
+    function goToNext() {
+      currentIndex = (currentIndex + 1) % triggers.length;
+      updateLightbox();
+    }
+
+    // Event listeners
+    triggers.forEach((trigger, index) => {
+      trigger.addEventListener('click', () => openLightbox(index));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', goToPrev);
+    lightboxNext.addEventListener('click', goToNext);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('lightbox--open')) return;
+
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        goToPrev();
+      } else if (e.key === 'ArrowRight') {
+        goToNext();
+      }
+    });
+  </script>
+</body>
+</html>
