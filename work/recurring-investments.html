@@ -140,7 +140,7 @@
     }
 
     const checkPassword = () => {
-      if (passwordInput.value === 'expelliarmus') {
+      if (passwordInput.value.trim() === 'expelliarmus') {
         sessionStorage.setItem('workAuthenticated', 'true');
         passwordModal.classList.add('password-modal--hidden');
         passwordError.classList.remove('password-modal__error--visible');

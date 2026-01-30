@@ -48,7 +48,7 @@
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Content Design/span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
@@ -491,7 +491,7 @@
     }
 
     const checkPassword = () => {
-      if (passwordInput.value === 'expelliarmus') {
+      if (passwordInput.value.trim() === 'expelliarmus') {
         sessionStorage.setItem('workAuthenticated', 'true');
         passwordModal.classList.add('password-modal--hidden');
         passwordError.classList.remove('password-modal__error--visible');

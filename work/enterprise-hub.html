@@ -281,7 +281,7 @@
       {
         image: '../images/enterprise-hub/06-screenshot-3.png',
         title: 'User action confirmation dialogs',
-        description: ' Because we had so many user administration actions and some of them sounded similar, it was important to spell out explicitly in confirmation dialogs what it meant to take a particular action. This deactivation dialog was one of the more complex ones, as I pushed for us to give super admins the option (via a checkbox) to remove deactivated users' access to org-owned content. ',
+        description: "Because we had so many user administration actions and some of them sounded similar, it was important to spell out explicitly in confirmation dialogs what it meant to take a particular action. This deactivation dialog was one of the more complex ones, as I pushed for us to give super admins the option (via a checkbox) to remove deactivated users' access to org-owned content.",
         noBezel: true
       },
       {
@@ -409,7 +409,7 @@
     }
 
     const checkPassword = () => {
-      if (passwordInput.value === 'expelliarmus') {
+      if (passwordInput.value.trim() === 'expelliarmus') {
         sessionStorage.setItem('workAuthenticated', 'true');
         passwordModal.classList.add('password-modal--hidden');
         passwordError.classList.remove('password-modal__error--visible');
