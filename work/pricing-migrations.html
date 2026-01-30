@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Pricing and Migrations | Jenna Garden</title>
-  <meta name="description" content="Case study: Pricing strategy updates and user migration experiences at Robinhood.">
+  <title>New pricing and migrations | Jenna Garden</title>
+  <meta name="description" content="Complete refresh of pricing plans to drive revenue and enable customer progression toward enterprise-grade offerings at Airtable">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Incorrect password. Please try again.</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -32,57 +42,134 @@
   <main class="case-study">
     <div class="container container--narrow">
       <header class="case-study__header">
-        <div class="case-study__company">Robinhood</div>
-        <h1 class="case-study__title">New Pricing and Migrations</h1>
-        <p>Pricing strategy updates and guiding users through transitions to new plan structures.</p>
+        <div class="case-study__company">Airtable</div>
+        <h1 class="case-study__title">New pricing and migrations</h1>
+        <p>Complete refresh of pricing plans to drive revenue and enable customer progression toward enterprise-grade offerings</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Senior Content Designer</span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Data Science</span>
+            <span class="case-study__meta-value">Product, Product Design, Engineering, Marketing, Legal</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>Overview</h2>
-        <!-- Add your content here -->
-        <p>[Add overview content from your existing case study]</p>
-
-        <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">pricing-migrations-1.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
-        </figure>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Challenge</h2>
-        <!-- Add your content here -->
-        <p>[Add challenge content from your existing case study]</p>
+        <h2>Problem</h2>
+        <p>Our existing pricing and packaging model wasn’t effective in driving revenue, optimizing our sales resources, and enabling customers to progressively grow with Airtable. Many customers weren’t upgrading beyond our more expensive self-serve plan (Pro) because it was too feature-rich and there weren’t strong upgrade-drivers for our Enterprise plan. </p>
       </section>
 
       <section class="case-study__section">
         <h2>Solution</h2>
-        <!-- Add your content here -->
-        <p>[Add solution content from your existing case study]</p>
+        <p>This called for an overhaul of our pricing model, which meant deprecating one of the less popular self-serve plans (Plus) and introducing a new plan called Business aimed at small businesses and departments within larger organizations that need basic enterprise features (like SSO). Users needed to be able to sign up for Business self-serve, which would allow Sales to focus on our most valuable customers. 
+        <p>Along with these bigger changes, we also planned to introduce new limits onto each plan, redesign all of our upsells, and define how the migration from the old plans to the new plans would work.</p>
 
         <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">pricing-migrations-2.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
+          <img src="../images/pricing-migrations/user-journey.png" alt="User journey map showing progression through pricing tiers">
         </figure>
       </section>
 
       <section class="case-study__section">
+        <h2>Business plan onboarding</h2>
+        <p>Setting up an Airtable organization—a container for all the customer’s Airtable workspaces—was previously a process supported by our Services teams.</p>
+        <p>Now, we needed to make it easy-to-understand for a user who may not be familiar with other enterprise admin tools. I suggested splitting the flow into two parts—a focused onboarding wizard immediately after checkout that introduced the user to the most important admin concepts and a contextual onboarding tour that guided them through important setup steps in the admin panel.</p>
+
+        <div class="monitor-carousel" id="onboarding-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen">
+              <img src="../images/pricing-migrations/org-name-filled.png" alt="Organization name" class="monitor-carousel__image">
+            </div>
+          </div>
+          <div class="monitor-carousel__caption">
+            <p class="monitor-carousel__caption-text"><strong>Organization name:</strong> First step of the checkout wizard.</p>
+          </div>
+          <div class="monitor-carousel__controls">
+            <div class="monitor-carousel__dots"></div>
+            <div class="monitor-carousel__arrows">
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      <section class="case-study__section">
+        <h2>Pricing page redesign</h2>
+        <p>Our pricing page needed updating to correctly display the new plans and position reflect the company’s new enterprise focus. I partnered closely with product marketing to rewrite all the copy and worked with product design to simplify the page visually (minimizing color, removing icons). I also proposed a new IA, splitting out our admin-related features into distinct sections to mirror competitors’ pricing pages and help position Airtable as an enterprise-ready product.</p>
+
+        <figure class="case-study__image">
+          <img src="../images/pricing-migrations/pricing-page.jpg" alt="Redesigned Airtable pricing page">
+        </figure>
+
+        <figure class="case-study__image">
+          <img src="../images/pricing-migrations/pricing-page-detail.png" alt="Pricing page detail showing plan comparison">
+        </figure>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Migration flows</h2>
+        <p>Because we were taking features away from customers and imposing new limits, these migration flows were sensitive and high-visibility—I worked through several rounds of feedback from senior stakeholders across product, marketing, legal, and eng to mitigate risk and preserve as much customer trust as possible.</p>
+        <p>The Plus plan migration was the most sensitive, as we were deprecating these customers’ plan and initially intended to increase their price per billable user after a grace period. Leadership decided at the last minute to let Plus customers keep their current price, so I included both versions of that informational dialog here.</p>
+
+        <div class="monitor-carousel" id="migration-carousel">
+          <div class="monitor-carousel__device monitor-carousel__device--no-bezel">
+            <div class="monitor-carousel__screen">
+              <img src="../images/pricing-migrations/plus-initial-email.png" alt="Initial email" class="monitor-carousel__image">
+            </div>
+          </div>
+          <div class="monitor-carousel__caption">
+            <p class="monitor-carousel__caption-text"><strong>Initial email:</strong> First touchpoint notifying users of the upcoming migration.</p>
+          </div>
+          <div class="monitor-carousel__controls">
+            <div class="monitor-carousel__dots"></div>
+            <div class="monitor-carousel__arrows">
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study__section">
         <h2>Outcomes</h2>
-        <!-- Add your metrics/outcomes here -->
+        <p>Results from the first 3 weeks post-launch:</p>
+
         <div class="outcome-box">
-          <div class="outcome-box__metric">[Metric]</div>
-          <div class="outcome-box__label">[Description of outcome]</div>
+          <div class="outcome-box__metric">+70%</div>
+          <div class="outcome-box__label">incremental ARR lift from self-serve plan upgrades to Business</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">$1M ARR</div>
+          <div class="outcome-box__label">generated within initial 3 weeks</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">15%</div>
+          <div class="outcome-box__label">adoption rate among customers with Airtable organizations on Business plan</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">0</div>
+          <div class="outcome-box__label">major UX issues reported in onboarding flow</div>
         </div>
       </section>
 
@@ -121,6 +208,278 @@
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('nav__links--open');
     });
+
+    // ONBOARDING CAROUSEL SCREENS
+    const onboardingScreens = [
+      {
+        image: '../images/pricing-migrations/org-name-filled.png',
+        title: 'Organization name',
+        description: 'First step of the checkout wizard: naming the organization.'
+      },
+      {
+        image: '../images/pricing-migrations/org-primer.png',
+        title: 'Organization primer',
+        description: 'Introducing the concept of organizations to users unfamiliar with enterprise tooling.'
+      },
+      {
+        image: '../images/pricing-migrations/checkout.png',
+        title: 'Checkout',
+        description: 'Payment step with clear billing information.'
+      },
+      {
+        image: '../images/pricing-migrations/payment-confirmed.png',
+        title: 'Payment confirmed',
+        description: 'Confirmation screen after successful payment.'
+      },
+      {
+        image: '../images/pricing-migrations/domains-primer.png',
+        title: 'Domains primer',
+        description: 'Explaining why domain verification matters for enterprise security.'
+      },
+      {
+        image: '../images/pricing-migrations/why-verify-domain.png',
+        title: 'Why verify domain',
+        description: 'Additional context on domain verification benefits.'
+      },
+      {
+        image: '../images/pricing-migrations/domain-verifying.png',
+        title: 'Domain verification',
+        description: 'The domain verification flow in progress.'
+      },
+      {
+        image: '../images/pricing-migrations/sso-step1.png',
+        title: 'SSO setup step 1',
+        description: 'Beginning the SSO configuration process.'
+      },
+      {
+        image: '../images/pricing-migrations/sso-step2.png',
+        title: 'SSO setup step 2',
+        description: 'Configuring identity provider settings.'
+      },
+      {
+        image: '../images/pricing-migrations/sso-step4.png',
+        title: 'SSO setup step 4',
+        description: 'Completing SSO configuration.'
+      },
+      {
+        image: '../images/pricing-migrations/admin-panel-primer.png',
+        title: 'Admin panel primer',
+        description: 'Introducing the admin panel and its capabilities.'
+      },
+      {
+        image: '../images/pricing-migrations/admin-panel-add-admins.png',
+        title: 'Add admins',
+        description: 'Inviting additional administrators to help manage the organization.'
+      },
+      {
+        image: '../images/pricing-migrations/invite-users-step1.png',
+        title: 'Invite users step 1',
+        description: 'Beginning the user invitation flow.'
+      },
+      {
+        image: '../images/pricing-migrations/invite-users-step2.png',
+        title: 'Invite users step 2',
+        description: 'Configuring invitation settings.'
+      },
+      {
+        image: '../images/pricing-migrations/membership-admin-review.png',
+        title: 'Membership admin review',
+        description: 'Reviewing and managing organization membership.'
+      },
+      {
+        image: '../images/pricing-migrations/membership-auto-manage.png',
+        title: 'Auto-manage membership',
+        description: 'Configuring automatic membership management rules.'
+      },
+      {
+        image: '../images/pricing-migrations/workspaces.png',
+        title: 'Workspaces',
+        description: 'Managing workspaces within the organization.'
+      },
+      {
+        image: '../images/pricing-migrations/billing-page.png',
+        title: 'Billing page',
+        description: 'First self-serve billing interface for enterprise customers with invoice transparency.'
+      }
+    ];
+
+    // PLUS MIGRATION CAROUSEL SCREENS
+    const migrationScreens = [
+      {
+        image: '../images/pricing-migrations/plus-initial-email.png',
+        title: 'Initial email',
+        description: 'First touchpoint notifying Plus users of the upcoming migration.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-homescreen-banner.png',
+        title: 'Homepage banner',
+        description: 'In-app banner providing visibility into the migration timeline.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-dialog.png',
+        title: 'Workspace settings dialog',
+        description: 'Workspace settings dialog explaining the changes and next steps.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-in-base-pre-migration-dialog.png',
+        title: 'In-base pre-migration dialog',
+        description: 'In-app alert shown before migration occurs within base environment.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-initial-workspace-settings-dialog.png',
+        title: 'Initial workspace settings dialog',
+        description: 'Alternative version indicating original pricing increase strategy before the final decision to maintain pricing.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-settings-banner.png',
+        title: 'Workspace settings banner',
+        description: 'Persistent banner within workspace settings communicating migration status.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-confirmation-email.png',
+        title: 'Confirmation email',
+        description: 'Post-migration email confirming successful plan transition.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-homescreen-banner-post-migration.png',
+        title: 'Homepage banner post-migration',
+        description: 'Updated homescreen notification appearing after migration completion.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-banner-post-migration.png',
+        title: 'Workspace banner post-migration',
+        description: 'Workspace-level notification confirming completed transition.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-settings-dialog-post-migration.png',
+        title: 'Workspace settings dialog post-migration',
+        description: 'Settings modal reflecting new plan details after migration.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-settings-banner-post-migration.png',
+        title: 'Workspace settings banner post-migration',
+        description: 'Secondary post-migration banner in settings area.',
+        noBezel: true
+      },
+      {
+        image: '../images/pricing-migrations/plus-workspace-settings-banner-final.png',
+        title: 'Workspace settings banner (final)',
+        description: 'Final settings banner with updated plan information.',
+        noBezel: true
+      }
+    ];
+
+    // Monitor Carousel functionality
+    function initMonitorCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const deviceEl = carousel.querySelector('.monitor-carousel__device');
+      const imageEl = carousel.querySelector('.monitor-carousel__image');
+      const captionEl = carousel.querySelector('.monitor-carousel__caption-text');
+      const dotsContainer = carousel.querySelector('.monitor-carousel__dots');
+      const prevBtn = carousel.querySelector('.monitor-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.monitor-carousel__arrow--next');
+
+      // Generate dots
+      dotsContainer.innerHTML = screens.map((_, i) =>
+        `<button class="monitor-carousel__dot ${i === 0 ? 'monitor-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
+      ).join('');
+
+      const dots = dotsContainer.querySelectorAll('.monitor-carousel__dot');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Toggle bezel
+        deviceEl.classList.toggle('monitor-carousel__device--no-bezel', !!screen.noBezel);
+
+        // Update caption
+        captionEl.innerHTML = `<strong>${screen.title}:</strong> ${screen.description}`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('monitor-carousel__dot--active', i === currentIndex);
+        });
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Initialize carousels
+    initMonitorCarousel('onboarding-carousel', onboardingScreens);
+    initMonitorCarousel('migration-carousel', migrationScreens);
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>

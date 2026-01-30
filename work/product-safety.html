@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -34,22 +44,233 @@
       <header class="case-study__header">
         <div class="case-study__company">Microsoft AI</div>
         <h1 class="case-study__title">Product safety</h1>
-        <p>Developing safety frameworks for AI products, ensuring responsible AI practices and user protection across Microsoft Copilot experiences.</p>
+        <p>Translating regulatory requirements into clear, human, and usable product experiences</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Principal Content Designer</span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Engineering</span>
+            <span class="case-study__meta-value">Product, Product Design, Legal, Engineering</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>Overview</h2>
-        <p>Case study content coming soon.</p>
+        <h2>Problem</h2>
+        <p>Microsoft has historically had a very positive relationship with regulators interested in AI safety. Throughout 2025, there were several new regulatory requirements that we needed to meet to both maintain these relationships and help keep vulnerable users safe. These requirements included:</p>
+        <ul>
+          <li>Clearly disclosing that users are interacting with an AI</li>
+          <li>Communicating model fallibility</li>
+          <li>Informing users about personalization settings and data usage</li>
+          <li>Protecting vulnerable or potentially overreliant users, including teens</li>
+        </ul>
+        <p>Before I joined the team, however, many of the safety and compliance-driven experiences used overly legalistic language that wasn't actually serving its intended purpose.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Solution</h2>
+        <p>I led 3 safety-related projects to ensure we met regulatory requirements without sacrificing clarity, brand voice, and trust. None of these projects had a clear Product owner (with Legal often being the most engaged stakeholder 😄) so I wrote specs, drove design iterations, and (of course) finessed language until it felt good.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+
+        <h3>Zero input disclaimer</h3>
+        <p>All consumer AI products have some version of this little string, and before joining MAI I didn't realize how much thought went into it. In Jan 2025 (on my second day on the job!), one of our org's VP's flagged that the existing disclaimer language was too long and verbose. It was particularly noticeable because Legal communicated that it needed to be presented every time before a user began a conversation with Copilot.</p>
+        <p>The disclaimer had been written by a member of our Legal team with the goal of communicating all of these ideas:</p>
+
+        <ul>
+          <li><strong>Fallibility:</strong> Communicating that Copilot can make mistakes.</li>
+          <li><strong>Personalization:</strong> In some markets, we have personalization settings on by default, so MSFT's position is to go beyond competitors and proactively inform users of this.</li>
+          <li><strong>Model training:</strong> In some markets, we also use conversation data for training our own models. We feel that users should be proactively informed of this as well.</li>
+          <li><strong>Clear opt out:</strong> We should route users to settings if they'd like to opt out of these defaults.</li>
+        </ul>
+
+      <p>While I was aligned with these requirements from a user trust perspective, I also wanted to ensure that we weren't compromising on UX quality by showing users potentially redundant language at the start of every conversation.</p>
+      <p>After a lot of negotiation with senior Legal stakeholders, we revised the existing language to shorten it and aligned on logic to only show a longer version of the string once every 6 months to users. I explained that this was still proactive, but because changing the related settings was a pretty infrequent action, it wasn't serving the user to repeatedly surface it.</p>
+      <p>In Dec 2025, we incorporated "Copilot is an AI" into the zero input disclaimer strings to meet new requirements coming out of CA and NY.</p>
+
+        <div class="phone-comparison">
+          <div class="phone-comparison__item">
+            <div class="phone-comparison__label">Before</div>
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/safety/prev-disclaimer.png" alt="Before disclaimer" class="phone-carousel__image">
+              </div>
+            </div>
+          </div>
+          <div class="phone-comparison__item">
+            <div class="phone-comparison__label">After</div>
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/safety/after-disclaimer-shorter.png" alt="After disclaimer" class="phone-carousel__image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>We aligned on different variants of the disclaimer string to accommodate different user states. Logged out users are required to always see the same generic language with links to our Terms and Privacy Statement.</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Personalization and training - long</th>
+              <th>Personalization and training - short</th>
+              <th>No personalization</th>
+              <th>No training</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Logged out</th>
+              <td colspan="4">Copilot may make mistakes. Using Copilot means you agree to the Terms of Use. See our Privacy Statement.</td>
+            </tr>
+            <tr>
+              <th>Logged in</th>
+              <td>Copilot is an AI and may make mistakes. Your conversations are personalized and help train AI. Opt out</td>
+              <td>Copilot is an AI and may make mistakes.</td>
+              <td>Copilot is an AI and may make mistakes. Your conversations help train AI. Opt out</td>
+              <td>Copilot is an AI and may make mistakes. Your conversations are personalized. Opt out</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>This solution kept us compliant, kept users informed, and satisfied senior stakeholders across Product, Eng, Design, and Legal.</p>
+
+        <h3>Teen onboarding</h3>
+        <p>In spring 2025, a new batch of teen-focused regulations came down from the Irish Data Protection Commission, a particularly proactive EU regulator that MSFT has built a strong partnership with. Among these included an ask for a teen-specific onboarding flow. Competitors didn't offer much by way of inspiration—many of their teen-specific onboarding experiences still resembled disclaimers that weren't meant to be read.</p>
+
+        <div class="case-study__centered-image">
+          <img src="../images/safety/teen-onboaring-competitors.png" alt="Some competitors we looked at for U18 onboarding">
+          <p class="case-study__image-caption">Competitive onboarding examples from Gemini and Snapchat. I'm not sure what teen would actually read these.</p>
+        </div>
+
+        <p>To start, I worked with 6 Legal teammates to understand the scope of the requirements—steering them away from prescribing specific language. Because the ask from the regulator was fairly open-ended, I took a more involved approach in interpreting what they had communicated to us and shaping the requirements. I also pushed them to prioritize which messages were the most important to communicate in the product vs. which ones could be offloaded to a secondary Support page written more for parents.</p>
+
+        <p>Then, I storyboarded out different versions of the flow without visuals. When reviewing with the Legal team, I distilled requirements from their feedback to inform edits instead to establish myself as the owner of the final language. This was a new approach for some of these stakeholders, who were used to writing product content themselves. My time in fintech has made me very well-versed in working with Legal and Compliance stakeholders.</p>
+
+        <p>Once I had the narrative approved, I then worked with my product design partner to visualize different versions of the flow. Initially, we explored more story-like and imagery-rich versions, but ultimately landed on a pared-back design that focused the user on the language and mirrored the in-chat experience.</p>
+
+        <h4>Mobile</h4>
+        <div class="phone-carousel" id="teen-mobile-carousel">
+          <div class="phone-carousel__device-wrapper">
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/safety/mobile-screen-1.png" alt="Screen 1" class="phone-carousel__image">
+              </div>
+            </div>
+            <div class="phone-carousel__dots">
+              <!-- Dots generated by JS -->
+            </div>
+            <div class="phone-carousel__arrows">
+              <button class="phone-carousel__arrow phone-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="phone-carousel__arrow phone-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-carousel__content">
+            <div class="phone-carousel__counter">Screen 1 of 4</div>
+            <h4 class="phone-carousel__title">Country selector</h4>
+            <div class="phone-carousel__description">
+              <p>All users select their country to ensure appropriate settings and inform response quality.</p>
+            </div>
+          </div>
+        </div>
+
+        <h4>Desktop</h4>
+        <div class="monitor-carousel" id="teen-desktop-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen">
+              <img src="../images/safety/web-screen-1.png" alt="Country and DOB selector on web" class="monitor-carousel__image">
+            </div>
+          </div>
+          <div class="monitor-carousel__caption">
+            <p class="monitor-carousel__caption-text"><strong>Screen title:</strong> Add your rationale for this screen here.</p>
+          </div>
+          <div class="monitor-carousel__controls">
+            <div class="monitor-carousel__dots"></div>
+            <div class="monitor-carousel__arrows">
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="monitor-carousel__arrow monitor-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+          <h4>Outcomes</h4>
+
+         <div class="outcome-box">
+          <div class="outcome-box__metric">100%</div>
+          <div class="outcome-box__label">Rollout across all platforms as of Jan 2026</div>
+        </div>
+
+        <h3>Dependency nudge</h3>
+        <p>New regulation coming out of CA and NY in fall 2025 pushed AI companies to mitigate risks to users having extended conversations (3+ hr in duration). I initially worked with a product designer on our Health team to design a subtle visual treatment for an in-conversation intervention, and came up with a few different variants to test.</p>
+
+      <div class="case-study__centered-image">
+          <img src="../images/safety/dependency-nudge-variants.png" alt="Initial variants for the dependency nudge">
+          <p class="case-study__image-caption">Ideal design and initial variants for dependency nudge language</p>
+      </div>
+
+        <p>I felt so fortunate because MAI had recently hired a clinician to advise on some of our health-related product experiences, so I was able to develop this language with his feedback. My goals:</p>
+
+        <ul>
+          <li><strong>Caring and casual tone:</strong> Don't patronize or alienate users.</li>
+          <li><strong>Offer, don't prescribe:</strong> Because the trigger logic for this nudge was quite broad (any user with a session over 120 min long), we didn't have enough context to be more directive about what the user should do. We could suggest a break, but should ultimately respect their agency.</li>
+          <li><strong>Establish the why:</strong> All messages should include a reference to conversation length so it's clear why users are seeing this.</li>
+        </ul>
+
+        <p>However, as we got closer to actually implementing this work, the new AI regulations coming out of CA and NY prescribed that this nudge also reinforce that Copilot is an AI. I was concerned that this could read as terse or patronizing to some users, so I explored different variants that tried to create a connection between the AI reminder and the suggestion to take a break.</p>
+
+        <p>Engineering also pushed us away from our initial inline design because of resourcing constraints, so we had to revert to our design system toast component.</p>  
+    
+      <div class="case-study__centered-image">
+          <img src="../images/safety/nudge-final-variants.png" alt="Final variants for the dependency nudge">
+          <p class="case-study__image-caption">I kept "Time for a break?" as the final header as well, because I liked how the question mark framed it more as a gentle suggestion. In variant 1 (top left), I wasn't sure that the recommendation to the user to take a break was clear enough in the subhead. Variant 2 was fun, but it was pushing the character limit of the toast and likely wouldn't localize well. In variant 3 (bottom left), the two sentences in the subheader seemed too disconnected from each other. I think variant 4 (bottom right) also suffers from the same issue.</p>
+      </div>
+
+        <div class="phone-carousel phone-carousel--single">
+          <div class="phone-carousel__device-wrapper">
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/safety/dependency-nudge.png" alt="Dependency nudge screen" class="phone-carousel__image">
+              </div>
+            </div>
+          </div>
+          <div class="phone-carousel__content">
+            <h4 class="phone-carousel__title">Final version</h4>
+            <div class="phone-carousel__description">
+              <p>Of the options I explored, I felt that these two subheader sentences did the best job of building on each other. I liked how "it might feel nice" is gentle and suggestive.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>My hope is that our original inline design will be built and tested eventually, but it has since been deprioritized.</p>
+
+          <h4>Outcomes</h4>
+
+         <div class="outcome-box">
+          <div class="outcome-box__metric">100%</div>
+          <div class="outcome-box__label">Rollout across all platforms in CA and NY</div>
+        </div>
+
       </section>
 
       <!-- Case Study Navigation -->
@@ -70,12 +291,12 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <p class="footer__text">&copy; 2026 Jenna Garden</p>
         <ul class="footer__links">
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
           <li><a href="../contact.html" class="footer__link">Contact</a></li>
-          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/jenna-garden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -87,6 +308,212 @@
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('nav__links--open');
     });
+
+    // TEEN MOBILE CAROUSEL
+    const teenMobileScreens = [
+      {
+        image: '../images/safety/mobile-screen-1.png',
+        title: 'Country selector',
+        description: '<p>All users select their country to ensure appropriate settings and inform response quality. "How to use Copilot" links to the Terms of Use in a more conversational way.</p>'
+      },
+      {
+        image: '../images/safety/mobile-screen-2.png',
+        title: 'DOB selector',
+        description: '<p>All users select their DOB. We will likely need to revisit this UX as age-gating tech and regulation evolves, particularly in the EU.</p>'
+      },
+      {
+        image: '../images/safety/mobile-screen-3.png',
+        title: 'Teen-specific onboarding content',
+        description: '<p>The text streams in and visually mirrors a conversational response, drawing more attention to it. The tone is warm and approachable—not patronizing.</p>'
+      },
+      {
+        image: '../images/safety/mobile-screen-4.png',
+        title: 'Home page',
+        description: '<p>Once the teen user progresses through the previous screen, they land in conversation like all other users. I advocated for further customizing the greeting and suggestion chips for teen users, but it was ultimately deprioritized.</p>'
+      }
+    ];
+
+    // TEEN DESKTOP CAROUSEL
+    const teenDesktopScreens = [
+      {
+        image: '../images/safety/web-screen-1.png',
+        title: 'Country and DOB selector',
+        description: 'Combined into one screen on web to improve conversion, given the additional real estate.'
+      },
+      {
+        image: '../images/safety/web-screen-2.png',
+        title: 'Teen-specific onboarding content',
+        description: 'Same content and streaming animation as mobile, but adapted for web layout.'
+      },
+      {
+        image: '../images/safety/web-screen-3.png',
+        title: 'Home page',
+        description: 'Desktop home page, for reference.'
+      }
+    ];
+
+    // Phone carousel functionality
+    function initCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const imageEl = carousel.querySelector('.phone-carousel__image');
+      const counterEl = carousel.querySelector('.phone-carousel__counter');
+      const titleEl = carousel.querySelector('.phone-carousel__title');
+      const descriptionEl = carousel.querySelector('.phone-carousel__description');
+      const dotsContainer = carousel.querySelector('.phone-carousel__dots');
+      const prevBtn = carousel.querySelector('.phone-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.phone-carousel__arrow--next');
+
+      // Generate dots
+      dotsContainer.innerHTML = screens.map((_, i) =>
+        `<button class="phone-carousel__dot ${i === 0 ? 'phone-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
+      ).join('');
+
+      const dots = dotsContainer.querySelectorAll('.phone-carousel__dot');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Update content
+        counterEl.textContent = `Screen ${currentIndex + 1} of ${screens.length}`;
+        titleEl.textContent = screen.title;
+        descriptionEl.innerHTML = screen.description;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('phone-carousel__dot--active', i === currentIndex);
+        });
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Monitor carousel functionality
+    function initMonitorCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const imageEl = carousel.querySelector('.monitor-carousel__image');
+      const captionEl = carousel.querySelector('.monitor-carousel__caption-text');
+      const dotsContainer = carousel.querySelector('.monitor-carousel__dots');
+      const prevBtn = carousel.querySelector('.monitor-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.monitor-carousel__arrow--next');
+
+      // Generate dots
+      dotsContainer.innerHTML = screens.map((_, i) =>
+        `<button class="monitor-carousel__dot ${i === 0 ? 'monitor-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
+      ).join('');
+
+      const dots = dotsContainer.querySelectorAll('.monitor-carousel__dot');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Update caption
+        captionEl.innerHTML = `<strong>${screen.title}:</strong> ${screen.description}`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('monitor-carousel__dot--active', i === currentIndex);
+        });
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Initialize all carousels
+    initCarousel('teen-mobile-carousel', teenMobileScreens);
+    initMonitorCarousel('teen-desktop-carousel', teenDesktopScreens);
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>

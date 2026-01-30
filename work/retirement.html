@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recommendations for Retirement | Jenna Garden</title>
-  <meta name="description" content="Case study: Retirement-specific investment guidance at Robinhood.">
+  <title>Recs for retirement | Jenna Garden</title>
+  <meta name="description" content="Case study: Drove design work for first-trade recommendations experience in retirement accounts at Robinhood.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -33,57 +43,133 @@
     <div class="container container--narrow">
       <header class="case-study__header">
         <div class="case-study__company">Robinhood</div>
-        <h1 class="case-study__title">Recommendations for Retirement</h1>
-        <p>Retirement-specific investment guidance and recommendations for long-term planning.</p>
+        <h1 class="case-study__title">Recs for Retirement</h1>
+        <p>Drove design work for our first-trade recommendations experience in our retirement accounts. Managed significant stakeholder feedback and navigated complex legal and compliance requirements.</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Senior Content Designer</span>
+            <span class="case-study__meta-value">Content Design/span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Data Science</span>
+            <span class="case-study__meta-value">Product, Product Design, Engineering, Legal, Compliance</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>Overview</h2>
-        <!-- Add your content here -->
-        <p>[Add overview content from your existing case study]</p>
-
-        <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">retirement-1.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
-        </figure>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Challenge</h2>
-        <!-- Add your content here -->
-        <p>[Add challenge content from your existing case study]</p>
+        <h2>Problem</h2>
+        <p>Robinhood was launching IRAs, but didn’t have any way to give users guidance on what to invest in. User research showed that our users were interested in investing for retirement, but didn’t know where to start. Users who were familiar with 401Ks expected that their money would already be invested for them or that they wouldn’t have to pick their investments.</p>
       </section>
 
       <section class="case-study__section">
         <h2>Solution</h2>
-        <!-- Add your content here -->
-        <p>[Add solution content from your existing case study]</p>
+        <p>My product team had already developed the first trade recommendations experience for our standard brokerage account. Because we heard in early UXR for our retirement experience that users wanted help picking investments, we pivoted our roadmap to focus on building a first-trade recommendations experience tailored for a retirement context.</p>
+      </section>
 
-        <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">retirement-2.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
-        </figure>
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+        <p>Because I was working with a more junior product designer, on this project I stepped up to become more of a design lead. I still owned content design E2E on the project, but I also set design timelines, represented the team in various XFN channels, and managed most of the stakeholder feedback we received.</p>
+        <p>Retirement was a huge company-wide effort to launch, and it taught me how to represent the team as a lead—advocating for more prominence within the overall retirement experience, partnering closely with Compliance and Legal through challenges, and helping other teams understand the unique value prop of recs. I proved that I am truly a designer who writes—not just a writer who knows Figma.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>The recommendation flow</h2>
+        <p>Structurally, we mirrored the existing first trade recommendations flow. We didn’t feel like we needed to reinvent the wheel since that flow had good conversion.</p>
+        <p><strong>Content goals:</strong></p>
+        <ul>
+          <li><strong>Emphasize personalization:</strong> Our recommended portfolios aligned with users’ time horizons and risk tolerances, so I aimed to highlight that we had taken their needs into account whenever possible.</li>
+          <li><strong>Look to the future:</strong> Because Robinhood in general is known for more short-term trading, I pushed for us to use future-oriented language and visuals wherever possible to prime users to keep this money parked in this account for the long-term.</li>
+          <li><strong>Educate to build trust:</strong> We heard from users who received a first trade recommendation in the brokerage account that while they trusted the recommendation, they couldn’t really articulate how their answers to the initial questions informed the recommendation they received. Because investing for retirement is more sensitive, I advocated for adding in an educational set of “results” screens that helped them understand how we arrived at the recommended portfolio.</li>
+        </ul>
+
+        <div class="phone-carousel" id="recs-carousel">
+          <div class="phone-carousel__device-wrapper">
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/retirement/value-prop-1.png" alt="Value proposition" class="phone-carousel__image">
+              </div>
+            </div>
+            <div class="phone-carousel__dots"></div>
+            <div class="phone-carousel__arrows">
+              <button class="phone-carousel__arrow phone-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="phone-carousel__arrow phone-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-carousel__content">
+            <div class="phone-carousel__counter">Screen 1 of 29</div>
+            <h3 class="phone-carousel__title">Value proposition swipey 1</h3>
+            <div class="phone-carousel__description">
+              <p>We had a series of value prop swipeys that appeared before a user signed up for a retirement account. Recommendations was mentioned in the first one, but I pushed for it to have its own dedicated swipey (see next image).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Recurring investments</h2>
+        <p>We got feedback from leadership that we should allow customers to set up a recurring investment into their recommended portfolio. This was really tricky from a legal and compliance perspective, as we legally weren’t able to make it seem like we were giving ongoing investment advice, since we weren’t a registered investment advisor.</p>
+
+        <p><strong>Content goals:</strong></p>
+        <ul>
+          <li><strong>Make it clear that recurring investments is a self-directed action:</strong> Legal and Compliance were very strict about the fact that starting a recurring investment needed to be an explicit choice and clearly labeled as self-directed. This then brought with it a user education problem, as we needed to explain this more technical-sounding legal language to our users.</li>
+          <li><strong>Explain the benefit without upselling too hard:</strong> Legal and Compliance were really sensitive to any language that felt too promotional. We were able to present this as an option to users, but couldn’t seem like we were necessarily endorsing it.</li>
+        </ul>
+
+        <div class="phone-carousel" id="recurring-carousel">
+          <div class="phone-carousel__device-wrapper">
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/retirement/recurring-1.png" alt="Recurring investments" class="phone-carousel__image">
+              </div>
+            </div>
+            <div class="phone-carousel__dots"></div>
+            <div class="phone-carousel__arrows">
+              <button class="phone-carousel__arrow phone-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="phone-carousel__arrow phone-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-carousel__content">
+            <div class="phone-carousel__counter">Screen 1 of 9</div>
+            <h3 class="phone-carousel__title">Recurring setup</h3>
+            <div class="phone-carousel__description">
+              <p>Choice cards presenting discrete self-directed investment options.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="case-study__section">
         <h2>Outcomes</h2>
-        <!-- Add your metrics/outcomes here -->
+        <p>Results from launch:</p>
+
         <div class="outcome-box">
-          <div class="outcome-box__metric">[Metric]</div>
-          <div class="outcome-box__label">[Description of outcome]</div>
+          <div class="outcome-box__metric">77%</div>
+          <div class="outcome-box__label">of funded IRA users invested in their recommended portfolio</div>
         </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">Stat-sig increase</div>
+          <div class="outcome-box__label">in retirement first trade rate and long-term activity rate</div>
+        </div>
+
+        <p>Results influenced subsequent experiments prioritizing this flow in account onboarding.</p>
       </section>
 
       <!-- Case Study Navigation -->
@@ -109,7 +195,7 @@
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
           <li><a href="../contact.html" class="footer__link">Contact</a></li>
-          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/jenna-garden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -121,6 +207,311 @@
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('nav__links--open');
     });
+
+    // RECOMMENDATION FLOW CAROUSEL
+    const recsScreens = [
+      {
+        image: '../images/retirement/value-prop-1.png',
+        title: 'Value proposition swipey 1',
+        description: '<p>We had a series of value prop swipeys that appeared before a user signed up for a retirement account. Recommendations was mentioned in the first one, but I pushed for it to have its own dedicated swipey (see next image).</p>'
+      },
+      {
+        image: '../images/retirement/value-prop-recs.png',
+        title: 'Recommendations value prop',
+        description: '<p>I collaborated with the retirement team's content designer to craft this language.</p>'
+      },
+      {
+        image: '../images/retirement/value-prop-how-recs-works.png',
+        title: 'How recommendations work',
+        description: '<p>This appears if the user interacts with the link text in the subhead of the previous screen.</p>'
+      },
+      {
+        image: '../images/retirement/ira-home.png',
+        title: 'IRA home screen',
+        description: '<p>Home screen with "Find investments" call-to-action, which leads to the recs experience.</p>'
+      },
+      {
+        image: '../images/retirement/find-investments.png',
+        title: 'Find investments',
+        description: '<p>I advocated for prioritizing the recs entry point here. From a content POV, I worked to sufficiently differentiate the two options.</p>'
+      },
+      {
+        image: '../images/retirement/survey-intro.png',
+        title: 'Survey intro',
+        description: '<p>Introduction to the questionnaire explaining its purpose.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q1-income.png',
+        title: 'Question 1: Income',
+        description: '<p>Income level question.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q2-experience.png',
+        title: 'Question 2: Experience',
+        description: '<p>Investment experience question.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q3-other-investments.png',
+        title: 'Question 3: Other investments',
+        description: '<p>Existing investments question.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q4-net-worth.png',
+        title: 'Question 4: Net worth',
+        description: '<p>Liquid net worth question.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q5-risk-tolerance.png',
+        title: 'Question 5: Risk tolerance',
+        description: '<p>Risk tolerance Q: This ended up being longer than I wanted, but I think this was the simplest we could keep the question while maintaining Likert scale answers. Managed a lot of stakeholder input.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q6-investment-objective.png',
+        title: 'Question 6: Investment objective',
+        description: '<p>Including this question was a legal requirement. Because it's so similar to the previous one, if I had the option I would've opted to omit it.</p>'
+      },
+      {
+        image: '../images/retirement/survey-q7-retirement-age.png',
+        title: 'Question 7: Retirement age',
+        description: '<p>Planned retirement age question.</p>'
+      },
+      {
+        image: '../images/retirement/survey-review-answers.png',
+        title: 'Review answers',
+        description: '<p>Summary of questionnaire responses before submission.</p>'
+      },
+      {
+        image: '../images/retirement/survey-loading.png',
+        title: 'Loading',
+        description: '<p>Processing screen while generating recommendations.</p>'
+      },
+      {
+        image: '../images/retirement/results-overview.png',
+        title: 'Results overview',
+        description: '<p>At several points, stakeholders questioned the value of the set of results screens, but I was a strong advocate for keeping them. I thought they provided valuable contextual education that could inform users' later investing decisions and help them better understand the investments we recommend.</p>'
+      },
+      {
+        image: '../images/retirement/results-time-horizon.png',
+        title: 'Time horizon',
+        description: '<p>Primes the user to expect volatility in the markets, but reassures them that it's normal and something that will even out over time.</p>'
+      },
+      {
+        image: '../images/retirement/results-risk-level.png',
+        title: 'Risk level',
+        description: '<p>I worked with our investment strategy team to understand which investor profile answers informed the user's assigned risk tolerance the most, and then surfaced them here. I also worked with our brand design team to craft super functional visuals to accompany the content here, as that was an approach that worked well in first trade recs.</p>'
+      },
+      {
+        image: '../images/retirement/results-allocation.png',
+        title: 'Asset allocation',
+        description: '<p>I created several variants of this subhead that would work with each possible asset allocation they could be recommended.</p>'
+      },
+      {
+        image: '../images/retirement/portfolio-funds.png',
+        title: 'Recommended portfolio',
+        description: '<p>Adding possessive "your" reiterates that the portfolio was made for the user. I worked with our investment strategy team to craft the subhead that appeared if a user interacted with each ETF.</p>'
+      },
+      {
+        image: '../images/retirement/portfolio-etf-definition.png',
+        title: 'ETF definition',
+        description: '<p>The first trade recs flow had a dedicated screen focused on introducing what ETFs are for new investors, but we removed that here, so I advocated for adding in this tooltip that contextualized them in case this was the first time a user was seeing that term.</p>'
+      },
+      {
+        image: '../images/retirement/portfolio-large-cap.png',
+        title: 'Large cap details',
+        description: '<p>Details on large cap ETF selection.</p>'
+      },
+      {
+        image: '../images/retirement/portfolio-percentages.png',
+        title: 'Allocation percentages',
+        description: '<p>In UXR, several users commented that they wanted to be able to change the portfolio's asset allocation, but they didn't have strong reasons as to why—likely they just wanted to feel some sense of control over the portfolio. To help reassure users, I advocated for adding this bottom sheet that appears if users interact with the percentages at all.</p>'
+      },
+      {
+        image: '../images/retirement/portfolio-bond.png',
+        title: 'Bond details',
+        description: '<p>We knew from user research that committing to invest in the portfolio would be the highest-friction moment in this flow, so as a post-launch improvement I suggested that we use the CTA to reiterate to the user in context that they didn't need a lot of money to get started. This change improved conversion through this screen by a significant amount.</p>'
+      },
+      {
+        image: '../images/retirement/checkout-amount.png',
+        title: 'Investment amount',
+        description: '<p>Investment amount entry.</p>'
+      },
+      {
+        image: '../images/retirement/checkout-breakdown.png',
+        title: 'Order breakdown',
+        description: '<p>Breakdown of investment allocation.</p>'
+      },
+      {
+        image: '../images/retirement/checkout-review.png',
+        title: 'Review order',
+        description: '<p>Order review screen.</p>'
+      },
+      {
+        image: '../images/retirement/checkout-agreement.png',
+        title: 'Legal agreement',
+        description: '<p>This screen was required by Legal. Initially, they wanted it earlier in the flow, but because I had a good working relationship with them I was able to get them comfortable with having it appear right before checkout instead (which would hopefully hurt conversion less).</p>'
+      },
+      {
+        image: '../images/retirement/checkout-swipe.png',
+        title: 'Swipe to invest',
+        description: '<p>Final confirmation with swipe gesture.</p>'
+      },
+      {
+        image: '../images/retirement/celebration.png',
+        title: 'Celebration screen',
+        description: '<p>I had actually previously worked on developing broader celebration design principles for Robinhood (that wouldn't result in a bunch of confetti), and based on those principles this was a moment that warranted celebrating. The content here is future-oriented and the tone is excited and warm.</p>'
+      }
+    ];
+
+    // RECURRING INVESTMENTS CAROUSEL
+    const recurringScreens = [
+      {
+        image: '../images/retirement/recurring-1.png',
+        title: 'Recurring setup',
+        description: '<p>Choice cards presenting discrete self-directed investment options.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-2.png',
+        title: 'Self-directed definition',
+        description: '<p>"Self-directed" definition in expandable bottom sheet.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-3.png',
+        title: 'Recurring frequency',
+        description: '<p>Setting up recurring investment frequency.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-4.png',
+        title: 'Recurring amount',
+        description: '<p>Configuring recurring investment amount.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-5.png',
+        title: 'Recurring review',
+        description: '<p>Reviewing recurring investment settings.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-6.png',
+        title: 'Recurring confirmation',
+        description: '<p>Confirming recurring investment setup.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-7.png',
+        title: 'Recurring success',
+        description: '<p>Success screen for recurring investment setup.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-8.png',
+        title: 'Processing',
+        description: '<p>Processing recurring investment order.</p>'
+      },
+      {
+        image: '../images/retirement/recurring-9.png',
+        title: 'Order confirmed',
+        description: '<p>Recurring investment order confirmation and celebration.</p>'
+      }
+    ];
+
+    // Carousel functionality
+    function initCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const imageEl = carousel.querySelector('.phone-carousel__image');
+      const counterEl = carousel.querySelector('.phone-carousel__counter');
+      const titleEl = carousel.querySelector('.phone-carousel__title');
+      const descriptionEl = carousel.querySelector('.phone-carousel__description');
+      const dotsContainer = carousel.querySelector('.phone-carousel__dots');
+      const prevBtn = carousel.querySelector('.phone-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.phone-carousel__arrow--next');
+
+      // Generate dots
+      dotsContainer.innerHTML = screens.map((_, i) =>
+        `<button class="phone-carousel__dot ${i === 0 ? 'phone-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
+      ).join('');
+
+      const dots = dotsContainer.querySelectorAll('.phone-carousel__dot');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Update content
+        counterEl.textContent = `Screen ${currentIndex + 1} of ${screens.length}`;
+        titleEl.textContent = screen.title;
+        descriptionEl.innerHTML = screen.description;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('phone-carousel__dot--active', i === currentIndex);
+        });
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Initialize carousels
+    initCarousel('recs-carousel', recsScreens);
+    initCarousel('recurring-carousel', recurringScreens);
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>

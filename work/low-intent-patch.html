@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Low Intent Patch | Jenna Garden</title>
+  <title>Low intent patch | Jenna Garden</title>
   <meta name="description" content="Case study: Teaching Copilot to ask more clarifying questions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -49,7 +59,7 @@
 
       <section class="case-study__section">
         <h2>Problem</h2>
-        <p>30% of Copilot's weekly active users only sent one message. Log inspection showed that these users would often churn because their initial "low intent" queries—vague fragments like "marketing plan" or single words like "email"—force the model to guess, leading to a poor first experience. Week 1 retention was 8% on web and 14% on Windows.
+        <p>30% of Copilot's weekly active users only sent one message. Log inspection showed that these users would often churn because their initial "low intent" queries—vague fragments like "marketing plan" or single words like "email"—force the model to guess, leading to a poor first experience. Week 1 retention was 8% on web and 14% on Windows.</p>
         <p>We also had qualitative UXR suggesting that users expect Copilot to demonstrate "conversational leadership" by guiding interactions toward meaningful outcomes.</p>
       </section>
 
@@ -347,6 +357,39 @@
         goToNext();
       }
     });
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>

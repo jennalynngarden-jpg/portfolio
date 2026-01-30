@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>First Trade Recommendations | Jenna Garden</title>
+  <title>First trade recommendations | Jenna Garden</title>
   <meta name="description" content="Case study: Helping new investors make their first investment decision at Robinhood.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -34,30 +44,39 @@
       <header class="case-study__header">
         <div class="case-study__company">Robinhood</div>
         <h1 class="case-study__title">First trade recommendations</h1>
-        <p>Around a third of customers who join Robinhood never place a trade. User research tells us that many of them hesitate because they lack the domain knowledge and confidence to decide what to invest in.</p>
-        <p>We created an experience where customers answer questions, learn their investment risk level based on responses, and receive recommendations for a diversified portfolio of four exchange-traded funds matching their risk profile. They can then invest through bulk checkout. Compliance with SEC's Regulation Best Interest was required.</p>
+        <p>Helping new users make their first investment with confidence</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Senior Content Designer</span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Legal, Compliance</span>
+            <span class="case-study__meta-value">Product, Product Design, Engineering, Data Science, UXR, Legal, Compliance</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>My role</h2>
-        <p>I led end-to-end UX content design, provided feedback on product requirements and early designs, iterated during user research, wrote all customer communications and Help Center content, and designed the in-app customer support triage flow while collaborating with five Legal and Compliance partners.</p>
-        <p>This was the first product to transition Robinhood from an entirely self-directed broker-dealer to one that makes recommendations to customers. That's a big deal! With so many eyes on the project from all sides of the business, I had to be able to clearly articulate my rationale for every content decision—even seemingly small ones!</p>
-        <p>Success factors included gradual information progression, narrative storytelling, and functional visuals aligned with content.</p>
+        <h2>Problem</h2>
+        <p>Around a third of customers who join Robinhood never place a trade. User research told us that many of them hesitate because they lack the domain knowledge and confidence to decide what to invest in.</p>
       </section>
 
       <section class="case-study__section">
-        <h2>The questionnaire</h2>
-        <p>Add your description of this section here.</p>
+        <h2>Solution</h2>
+        <p>We designed an immersive experience where the customer answers a set of questions, learns which level of investing risk is right for them based on their answers, and then is recommended a small, diversified portfolio of four exchange-traded funds (ETFs) that matches their risk level. They can then invest in that portfolio in a bulk checkout flow. To make investment recommendations as a self-directed broker-dealer, we have to comply with the SEC's <a href="https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/regulation-best-interest" target="_blank" rel="noopener">Regulation Best Interest</a>.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+        <p>I led end-to-end UX content design, provided feedback on product requirements and early designs, iterated during user research, wrote all customer communications and Help Center content, and designed the in-app customer support triage flow while collaborating with five Legal and Compliance partners.</p>
+        <p>This was the first product to transition Robinhood from an entirely self-directed broker-dealer to one that makes recommendations to customers. That's a big deal! With so many eyes on the project from all sides of the business, I had to be able to clearly articulate my rationale for every content decision.</p>
+        <p>The keys to our success were gradual information progression, narrative storytelling, and functional visuals aligned with content.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h3>The questionnaire</h3>
+        <p>The experience begins with introductory screens leading into a questionnaire assessing the customer's investing needs to match them with a risk level. The questionnaire underwent at least 6 rounds of revision and review from stakeholders across product, legal, and compliance.</p>
 
         <div class="phone-carousel" id="questionnaire-carousel">
           <div class="phone-carousel__device-wrapper">
@@ -94,14 +113,14 @@
       </section>
 
       <section class="case-study__section">
-        <h2>The portfolio walkthrough</h2>
-        <p>Add your description of this section here.</p>
+        <h3>The portfolio walkthrough</h3>
+        <p>This section presents new information sequentially in an immersive, narrative experience. Customers learn about ETFs, diversification, and the specific ETFs in their portfolio.</p>
 
         <div class="phone-carousel" id="walkthrough-carousel">
           <div class="phone-carousel__device-wrapper">
             <div class="phone-carousel__device">
               <div class="phone-carousel__screen">
-                <img src="../images/first-trade/walkthrough-01.jpg" alt="Screen 1" class="phone-carousel__image">
+                <img src="../images/first-trade/walkthrough-01.png" alt="Screen 1" class="phone-carousel__image">
               </div>
             </div>
             <div class="phone-carousel__dots"></div>
@@ -129,14 +148,14 @@
       </section>
 
       <section class="case-study__section">
-        <h2>The trade flow</h2>
-        <p>Add your description of this section here.</p>
+        <h3>The trade flow</h3>
+        <p>Once committed to investing, customers link their bank, transfer funds, and invest in one continuous flow. Several screens reusing other teams' designs (bank linking, fund transfers) were excluded from this breakdown.</p>
 
         <div class="phone-carousel" id="tradeflow-carousel">
           <div class="phone-carousel__device-wrapper">
             <div class="phone-carousel__device">
               <div class="phone-carousel__screen">
-                <img src="../images/first-trade/tradeflow-01.jpg" alt="Screen 1" class="phone-carousel__image">
+                <img src="../images/first-trade/trade-flow-01.png" alt="Screen 1" class="phone-carousel__image">
               </div>
             </div>
             <div class="phone-carousel__dots"></div>
@@ -164,16 +183,8 @@
       </section>
 
       <section class="case-study__section">
-        <h2>Legal and compliance process</h2>
-        <p>Required sign-off from 2 lawyers and 3 Compliance principals across 200+ screens, customer communications, and a Help Center article.</p>
-        <p>I grouped content pieces for approval, established a review cadence, and balanced different communication styles, availabilities, and competing priorities. I met multiple times weekly to understand and address feedback, articulating rationale for nearly every content decision. I learned to constructively challenge disagreeable feedback.</p>
-        <p>The outcome: strengthened relationships with stakeholders and improved content design abilities.</p>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Help Center article</h2>
-        <p>A product operations manager helped anticipate and prioritize customer questions. I organized questions into sections with drafted responses and collaborated with Legal and Compliance partners to incorporate feedback.</p>
-        <p>The article was intentionally comprehensive to balance customer education with transparency regarding investment recommendations.</p>
+        <h3>Legal and compliance process</h3>
+        <p>Hands down, the most challenging part of this project was getting Legal and Compliance approval on all of the different content pieces. I needed 2 lawyers and 3 Compliance principals to sign off on over 200 screens, a set of customer communications, and a Help Center article. I grouped these different pieces of content for approval and established a cadence for reviewing work. I balanced different communication styles, availabilities, and competing priorities across these 5 stakeholders, often meeting several times a weeks with folks to understand and respond to their feedback. I had to be able to articulate my rationale behind nearly every content decision and learn how to push back on feedback I disagreed with. It was tough, but working through it ultimately strengthened my relationships with those folks and made me a better content designer.</p>
       </section>
 
       <section class="case-study__section">
@@ -216,7 +227,7 @@
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
           <li><a href="../contact.html" class="footer__link">Contact</a></li>
-          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/jenna-garden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -235,56 +246,186 @@
     const questionnaireScreens = [
       {
         image: '../images/first-trade/questionnaire-01.png',
-        title: 'Screen title 1',
-        description: '<p>Add your rationale for this screen here.</p>'
+        title: 'Intro',
+        description: '<p>Content goal: Set a welcoming, friendly tone for the experience and let customers know what they will get out of it.</p><p>Implementation: “Want help” invites the customer in, but doesn’t assume they need help. “We’ve got you” helps establish Robinhood’s friendly guide persona. “Get matched to a diversified portfolio” states exactly what they’ll get, and “tailored to your needs” communicates that what we recommend will be personalized.</p>'
       },
       {
         image: '../images/first-trade/questionnaire-02.png',
-        title: 'Screen title 2',
-        description: '<p>Add your rationale for this screen here.</p>'
+        title: 'Questionnaire intro',
+        description: '<p>Content goal: Set the expectation that the customer will be answering a set of questions and explain why.</p><p>Implementation: “Tell us a little about you” maintains the conversational tone from the first screen and implies that this won’t be a lengthy questionnaire. The subheader clearly outlines why we need them to take this step.</p>'
       },
       {
         image: '../images/first-trade/questionnaire-03.png',
-        title: 'Screen title 3',
-        description: '<p>Add your rationale for this screen here.</p>'
+        title: 'Q1: Investing experience',
+        description: '<p>Content goal: Have customers self-report their level of experience investing in equities. In research, customers wanted us to be the first thing we knew about them.</p><p>Implementation: "in the stock market" clarifies that this question is about equities investing, since we had a wave of crypto-first customers join the platform in 2021. For the answers, my UX researcher recommended using a Likert scale across all questions to make them easier to answer.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-04.png',
+        title: 'Q2: Risk tolerance',
+        description: '<p>Content goal: Ask about the customer\'s risk tolerance without using technical terms or deviating from the Likert scale.</p><p>Implementation: The subheader aims to give the customer the necessary educational context to be able to answer this question. We avoided phrasing the question as a hypothetical (i.e. "If your investment lost 30% of its value, what would you do?") because we saw that it introduced too much cognitive load and we observed that new investors didn\'t have a way to intuit the answer - because they had never been in that situation!</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-05.png',
+        title: 'Q3: Income',
+        description: '<p>Content goal: Ask the customer about how much money they make annually.</p><p>Implementation: The subheader encourages the customer to think about all possible income sources. Our data scientist helped determine the ranges in the answers.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-06.png',
+        title: 'Q4: Other investments',
+        description: '<p>Content goal: Ask the customer if they have investments in other accounts.</p><p>Implementation: The subheader clarifies that retirement accounts are included. “I’m not sure” serves as an out for customers who may be new to investing and not sure what constitutes an investment.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-07.png',
+        title: 'Q5: Net worth',
+        description: '<p>Content goal: Ask about the customer\'s net worth without using any technical terms.</p><p>Implementation: The question asks about net worth by defining it, and the subheader further clarifies it.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-08.png',
+        title: 'Transition screen',
+        description: '<p>Content goal: Create a pause that transitions into the next set of questions, which all ask the customer about their feelings and plans for the group of money that they might invest today. In research, we saw that prompting the customer to have an amount in mind was helpful.</p><p>Implementation: "you might invest" indicates that we\'re not assuming that the customer is ready to invest. This respects the space they need to make a decision.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-09.png',
+        title: 'Q6: Investment objective',
+        description: '<p>Content goal: Create a simple version of a question that typically has several answers like "Income" that aren\'t intuitive for new investors.</p><p>Implementation: During research, we identified that 3 answers was easier for customers to choose from than 5. We also needed the answers to communicate the tradeoffs that come with each goal, which ultimately resulted in longer answers.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-10.png',
+        title: 'Q7: Time horizon',
+        description: '<p>Content goal: Ask about time horizon without using a formal term like "time horizon."</p><p>Implementation: "About" softens the question so it\'s less committal. "plan" as a verb acknowledges that this could change.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-11.png',
+        title: 'Q8: Likelihood to withdraw',
+        description: '<p>Content goal: This question was required by Legal to help validate the customer\'s answer to the time horizon question.</p><p>Implementation: Using "planned" creates continuity between this question and the previous one. Answers continue to use Likert scale, and at this point in the questionnaire the customer should be pretty accustomed to answering questions on that scale.</p>'
+      },
+      {
+        image: '../images/first-trade/questionnaire-12.png',
+        title: 'Loading screen',
+        description: '<p>Content goal: Let the customer know that we\'re doing work on our end to understand their answers. Content should work with the loading animation.</p><p>Implementation: "Analyzing" primes the customer to expect some form of analysis after this screen. Ellipses lets the customer know that seeing this screen is a temporary state.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-01.png',
+        title: 'Risk level reveal',
+        description: '<p>Content goal: Tell the customer what amount of risk makes sense for them and relay what they told us. There are 5 possible risk levels (low, lower, medium, higher, high), and each one has a customer subheader.</p><p>Implementation: “We recommend” was a revision I worked on with Compliance, because it needed to be clear that this statement is a result of our analysis and is our opinion. “Based on your answers” was also a Compliance ask, because we needed to reference back to how we arrived at this conclusion. “What you told us” identifies that section of the screen as an outline of their answers. The underlined words represent an inline definition component, which helps explain more technical terms.</p>'
       }
     ];
 
     // THE PORTFOLIO WALKTHROUGH
     const walkthroughScreens = [
       {
-        image: '../images/first-trade/walkthrough-01.jpg',
-        title: 'Screen title 1',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/walkthrough-02.png',
+        title: 'Portfolio intro',
+        description: '<p>Content goal: Communicate that the portfolios are prebuilt while continuing to reiterate that diversification is a central value prop.</p><p>Implementation: "Matched" tells the customer that the portfolio is prebuilt. Describing the portfolio as "diversified" in the header increases the likelihood that a user scanning the screen will notice it. Subheader expands on diversification. "Explore what\'s inside" as the CTA both invokes the excitement of learning something new while subtly reiterating the definition of a portfolio - it\'s a larger whole that contains things within it.</p>'
       },
       {
-        image: '../images/first-trade/walkthrough-02.jpg',
-        title: 'Screen title 2',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/walkthrough-03.png',
+        title: 'ETF education',
+        description: '<p>Content goal: In research, most customers expected to see stocks in their portfolio, so we need to address that expectation and explain what ETFs are in an accessible and concise way.</p><p>Implementation: I used "fund" as a more accessible shorthand for ETF in the header. The subheader defines ETFs by comparing them to baskets and providing an example of how ETFs work - they aren\'t stocks, but they can be a vehicle for investing in stocks.</p>'
       },
       {
-        image: '../images/first-trade/walkthrough-03.jpg',
-        title: 'Screen title 3',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/walkthrough-04.png',
+        title: 'VTI',
+        description: '<p>Content goal: Introduce and contextualize VTI, the US stock market fund in the portfolio.</p><p>Implementation: We aimed to make these designs scannable, so the header gives the customer the most essential piece of information, and the subheader then expands on it. We aimed to strike a balance where we answered the customer\'s most important questions about the ETF while avoiding information overload. "has grown to be the largest stock market" communicates to the customer that the US market has a strong track record without implying future growth.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-05.png',
+        title: 'VTI learn more',
+        description: '<p>Content goal: Create a template for the information hierarchy that can be applied to the other ETFs while still helping the customer feel as though each one of these screens is providing unique information.</p><p>Implementation: The first sentence of the subheader adds more color on how VTI is diversified. I opted to make the first sentence of this paragraph unique so that the customer would feel like each screen was offering new information, even if the template across them is fairly similar. The second sentence nods to the criteria that our algorithm cares about when selecting VTI over other similar ETFs. This sentence will be essentially the same across all of the "learn more" screens. The expandable rows below the subheader reflect the most common questions that customers had about these ETFs - namely which stocks are included in them and how they perform. Adding the detail on the expense ratio was a Compliance requirement, but I tried to demonstrate the relative insignificance of the fee compared to their overall investment.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-06.png',
+        title: 'VWO',
+        description: '<p>Content goal: Introduce VWO and explain why it\'s a good idea to invest in emerging markets while contextualizing unfamiliar terms.</p><p>Implementation: I made the concept of "emerging markets" more accessible by referring to them as "fast-growing countries" in the header. In the subheader, I explicitly defined "emerging markets" and gave examples of some of the main markets that the investments in the ETF represent. I pushed for us to show VWO ahead of VEA because I think it\'s easier to explain developed markets when you\'re able to compare them to emerging markets.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-13.png',
+        title: 'VWO learn more',
+        description: '<p>Content goal: Articulate the risk-return relationship that defines emerging markets (higher risk, higher return) while adhering to the learn more template.</p><p>Implementation: The first sentence of the subheader establishes the tradeoff between risk and return with investing in emerging markets. The rest of the page follows the patterns established in the first learn more.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-07.png',
+        title: 'VEA',
+        description: '<p>Content goal: Introduce VEA and define developed markets by contrasting them against emerging markets.</p><p>Implementation: Developed markets are actually a bit complex to define, but "more established" is encompassing enough without getting too technical. Subheader mirrors that of VWO by providing examples of specific countries.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-15.png',
+        title: 'VEA learn more',
+        description: '<p>Content goal: Explain the risk-return relationship that defines investing in developed markets (lower risk, lower return) while following the learn more template.</p><p>Implementation: In a parallel to the VWO learn more subheader, the first sentence generalizes about how developed markets are generally lower risk. The rest of the screen follows the learn more template.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-08.png',
+        title: 'BND',
+        description: '<p>Content goal: Introduce BND with a focus on why we included bonds in their portfolio, rather than going into the technical specifics of what bonds are. Balance helping customers understand why they should invest in bonds without overwhelming them with too much information.</p><p>Implementation: The verb "balance" was intuitive to customers in research and also reflects the role of the bond ETF in the portfolio from a data perspective. The subheader speaks broadly to how bonds behave relative to stocks, giving the customer a rationale for why it\'s worth investing in them - even if they don\'t fully understand exactly what they are.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-16.png',
+        title: 'BND learn more',
+        description: '<p>Content goal: Build on the explanation behind why we included bonds in the customer\'s portfolio while utilizing the learn more template.</p><p>Implementation: The first sentence tells the customer why bonds are less risky to invest in stocks and reiterates their role in the portfolio. Because there are many different types of bonds in BND that have more technical names (like "government agency securities," for example), the subheader under "Number of bonds" is more generic than its equities-ETF counterparts.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-14.png',
+        title: 'Asset allocation primer',
+        description: '<p>Content goal: In research, we saw that customers were surprised to see percentages that represented our recommendation of how they allocate their money across the 4 ETFs on the following screen. The goal of this screen is to prepare them for that moment and explain that the recommended allocation is part of our recommendation.</p><p>Implementation: "Almost there!" creates a moment of anticipation. "Now we\'ll split your money" clarifies that we are the ones determining the allocation. The subheader tells the customer why we\'re doing this and why it benefits them. I opted to use "split" as a verb and a noun because "allocate/allocation" was alienating to new investors we interviewed in research. "Calculate" sets the customer up to expect a loading state on the next screen.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-17.png',
+        title: 'Asset allocation animation',
+        description: '<p>Content goal: Demonstrate that we’re doing work on our end to figure out their asset allocation. The cube animates before adjusting to reflect the asset allocation that the customer is recommended.</p><p>Implementation: Text mirrors the CTA on the previous screen.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-11.png',
+        title: 'Portfolio summary',
+        description: '<p>Content goal: Give the customer an overview of the ETFs we’ve recommended + their respective allocations. Explain why they can’t change the allocations, since that was one of the most common questions that came up during research.</p><p>Implementation: The subheader at the top of the screen reiterates diversification as the central value prop in an easy-to-understand way. “Why can’t I change these percentages?” articulates a question from a first-person point of view that the customer is likely having.</p>'
+      },
+      {
+        image: '../images/first-trade/walkthrough-12.png',
+        title: 'Why can\'t I change these percentages?" bottom sheet',
+        description: '<p>Content goal: Give the customer some context on how the algorithm behind the recommendation works and why they can’t adjust their asset allocation without getting overly-technical. In research, several customers said they wanted to adjust the allocation, but didn’t have a clear intention behind doing so. Providing them with a rationale behind the percentages helps them feel comfortable moving forward.</p><p>Implementation: Header immediately answers the question instead of repeating it. “Based on your answers, we calculated…” establishes from the get-go that thought went into these percentages. “help optimize your portfolio’s expected returns while taking on lower risk” nods to the two goals that the algorithm is trying to balance. Last sentence hits home on why the customer shouldn’t adjust these.</p>'
       }
     ];
 
     // THE TRADE FLOW
     const tradeflowScreens = [
       {
-        image: '../images/first-trade/tradeflow-01.jpg',
-        title: 'Screen title 1',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/trade-flow-01.png',
+        title: 'Order entry',
+        description: '<p>Content goal: Flag to the customer that they can\'t enter an amount less than $20, which differs from our normal fractional trade flow. Typically, customers can invest as little as $1.</p><p>Implementation: "Enter" as an imperative gives the customer in-context direction. The inline link offers an entry point to learn why they can\'t invest less than $20.</p>'
       },
       {
-        image: '../images/first-trade/tradeflow-02.jpg',
-        title: 'Screen title 2',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/trade-flow-02.png',
+        title: 'Order input',
+        description: '<p>No content changes from standard experience.</p>'
       },
       {
-        image: '../images/first-trade/tradeflow-03.jpg',
-        title: 'Screen title 3',
-        description: '<p>Add your rationale for this screen here.</p>'
+        image: '../images/first-trade/trade-flow-03.png',
+        title: 'Order amount allocation',
+        description: '<p>Content goal: It was a Compliance requirement to include the exact name of each ETF somewhere in the flow, so we included them after the customer has committed an amount. We did not introduce the ETF names earlier because we saw in research that seeing "Vanguard" earlier in the flow conjured associations with retirement products and was overall more distracting than informative for customers.</p><p>Implementation: The CTA here is dynamic. Depending on what the customer has done up to this point, it says "Link your bank account," "Transfer funds," or "Review orders."</p>'
+      },
+      {
+        image: '../images/first-trade/trade-flow-04.png',
+        title: 'Review order',
+        description: '<p>Implementation: This screen was kept as similar as possible to the existing order review screen in our trade flow. The National Best Bid and Offer (NBBO) information is required by Compliance, and this design was the least busy of the options we had. We say "orders" instead of "order" here because investing in their portfolio means that the customer will place 4 individual orders - one for each ETF.</p>'
+      },
+      {
+        image: '../images/first-trade/trade-flow-05.png',
+        title: 'Legal agreement',
+        description: '<p>Implementation: The content on this screen was owned entirely by Legal with only light edits from me, but I helped determine the placement of the screen. We opted to place it as late as possible in the flow so that customers would be more likely to move forward and not be deterred by the legal language.</p>'
+      },
+      {
+        image: '../images/first-trade/trade-flow-06.png',
+        title: 'Swipe up to submit',
+        description: '<p>Implementation: The main content change here was modifying the subheader to accommodate for 4 separate orders. Everything else mirrors the existing version of this screen for a single order.</p>'
+      },
+      {
+        image: '../images/first-trade/trade-flow-07.png',
+        title: 'Receipt',
+        description: '<p>Implementation: I only made minor content changes on this screen to ensure that the customer understood that they had placed multiple orders while still highlighting the overall amount they invested.</p>'
+      },
+      {
+        image: '../images/first-trade/trade-flow-08.png',
+        title: 'Celebratory moment',
+        description: '<p>Content goal: Recognize and celebrate the customer making their first investment.</p><p>Implementation: “Becoming an investor” acknowledges what the customer just did while creating an identity around investing and helping the customer feel like a new member of an ingroup. The subheader provides one last nod to diversification as the central value prop to help the customer feel confident in their decision to invest.</p>'
       }
     ];
 
@@ -357,6 +498,39 @@
     initCarousel('questionnaire-carousel', questionnaireScreens);
     initCarousel('walkthrough-carousel', walkthroughScreens);
     initCarousel('tradeflow-carousel', tradeflowScreens);
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>

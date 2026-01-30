@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onboarding Redesign | Jenna Garden</title>
-  <meta name="description" content="Case study: Improving the user signup and first-time experience at Robinhood.">
+  <meta name="description" content="Case study: Restructured the Robinhood onboarding flow with refreshed visuals and content aligned to 2022 brand identity standards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- Password Modal -->
+  <div class="password-modal" id="passwordModal">
+    <div class="password-modal__content">
+      <h2 class="password-modal__title">Password required</h2>
+      <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
+      <button class="password-modal__button" id="passwordSubmit">Submit</button>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
@@ -34,7 +44,7 @@
       <header class="case-study__header">
         <div class="case-study__company">Robinhood</div>
         <h1 class="case-study__title">Onboarding Redesign</h1>
-        <p>Improving the user signup flow and first-time experience.</p>
+        <p>Restructured the onboarding flow with refreshed visuals and content aligned to 2022 brand identity standards.</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
@@ -42,47 +52,78 @@
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Data Science</span>
+            <span class="case-study__meta-value">Product, Design, Engineering, Legal, Compliance</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>Overview</h2>
-        <!-- Add your content here -->
-        <p>[Add overview content from your existing case study]</p>
-
-        <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">onboarding-1.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
-        </figure>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Challenge</h2>
-        <!-- Add your content here -->
-        <p>[Add challenge content from your existing case study]</p>
+        <h2>Problem</h2>
+        <p>The Robinhood onboarding flow was long, not structured well, and hadn't evolved to represent our current product offering.</p>
       </section>
 
       <section class="case-study__section">
         <h2>Solution</h2>
-        <!-- Add your content here -->
-        <p>[Add solution content from your existing case study]</p>
+        <p>We restructured the onboarding flow with refreshed visuals and content aligned to our 2022 brand identity standards.</p>
+      </section>
 
-        <figure class="case-study__image">
-          <!-- Replace with your image -->
-          <div class="placeholder-image">onboarding-2.jpg</div>
-          <figcaption>[Add image caption]</figcaption>
-        </figure>
+      <section class="case-study__section">
+        <h2>My role</h2>
+        <p>I drove UX content design, solicited and responded to stakeholder feedback, secured Legal and Compliance approvals, and communicated implementation details to frontend engineering.</p>
+        <p>I joined this project late, after the visual design was already locked. Despite this constraint, content changes still yielded measurable impact.</p>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Screen walkthrough</h2>
+        <p>I worked through every screen in the onboarding flow, ensuring copy was clear, aligned to brand voice, and addressed user needs at each step.</p>
+
+        <div class="phone-carousel phone-carousel--no-dots" id="onboarding-carousel">
+          <div class="phone-carousel__device-wrapper">
+            <div class="phone-carousel__device">
+              <div class="phone-carousel__screen">
+                <img src="../images/onboarding/screen-1.png" alt="Welcome screen" class="phone-carousel__image">
+              </div>
+            </div>
+            <div class="phone-carousel__arrows">
+              <button class="phone-carousel__arrow phone-carousel__arrow--prev" aria-label="Previous screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button class="phone-carousel__arrow phone-carousel__arrow--next" aria-label="Next screen">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-carousel__content">
+            <div class="phone-carousel__counter">Screen 1 of 29</div>
+            <h3 class="phone-carousel__title">Welcome</h3>
+            <div class="phone-carousel__description">
+              <p>Overview of Robinhood offerings: "invest, spend, and put your money in motion."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study__section">
+        <h2>Key learning</h2>
+        <p>Even when joining a project late with visual design already locked, content design can still drive meaningful, measurable impact. This project reinforced the importance of content as a lever for improving user experience.</p>
       </section>
 
       <section class="case-study__section">
         <h2>Outcomes</h2>
-        <!-- Add your metrics/outcomes here -->
+        <p>This project established a foundation for future experiments with consistent tone, style, and terminology across the onboarding flow.</p>
+
         <div class="outcome-box">
-          <div class="outcome-box__metric">[Metric]</div>
-          <div class="outcome-box__label">[Description of outcome]</div>
+          <div class="outcome-box__metric">+5.9%</div>
+          <div class="outcome-box__label">stat-sig increase in install-to-fund rate on iOS</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">100%</div>
+          <div class="outcome-box__label">rollout across iOS, Android, and web</div>
         </div>
       </section>
 
@@ -90,7 +131,7 @@
       <nav class="case-study__nav">
         <a href="retirement.html">
           <span class="case-study__nav-label">Previous</span>
-          <span class="case-study__nav-title">Recommendations for Retirement</span>
+          <span class="case-study__nav-title">Recs for Retirement</span>
         </a>
         <a href="crypto-recurring.html">
           <span class="case-study__nav-label">Next</span>
@@ -109,7 +150,7 @@
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
           <li><a href="../contact.html" class="footer__link">Contact</a></li>
-          <li><a href="https://www.linkedin.com/in/jennagarden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/jenna-garden/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -121,6 +162,237 @@
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('nav__links--open');
     });
+
+    // ONBOARDING CAROUSEL
+    const onboardingScreens = [
+      {
+        image: '../images/onboarding/screen-1.png',
+        title: 'Welcome',
+        description: '<p>Overview of Robinhood offerings: "invest, spend, and put your money in motion."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-2.png',
+        title: 'Investing value prop',
+        description: '<p>Prioritized stocks, business news, and educational resources. Emphasized: "It\'s never been easier..."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-3.png',
+        title: 'Access value prop',
+        description: '<p>Key message: "Start with just $1." Subheader challenged assumptions about minimums and commissions.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-4.png',
+        title: 'Safety value prop',
+        description: '<p>Featured "Safety first" company value. Highlighted encryption, two-factor authentication, and 24/7 support.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-5.png',
+        title: 'Create login',
+        description: '<p>"You\'ll use this login to access Robinhood next time."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-6.png',
+        title: 'Identity verification chapter',
+        description: '<p>"Help us" imperative framing. Emphasized legal requirements and security.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-7.png',
+        title: 'Phone verification',
+        description: '<p>"We\'ll send you a six-digit code."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-8.png',
+        title: 'SSN primer',
+        description: '<p>Addressed three customer concerns via bullet points. Focused on information protection and credit score impact.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-9.png',
+        title: 'Investment questions',
+        description: '<p>Combined multiple regulatory questions. Avoided misusing terminology like "investment profile."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-10.png',
+        title: 'Insider trading flag',
+        description: '<p>Acknowledged technical language complexity. Positioned "No" as default answer.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-11.png',
+        title: 'Tax certification',
+        description: '<p>Translated legal jargon to plain language. Highlighted key terms like "W-9."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-12.png',
+        title: 'Brokerage agreement',
+        description: '<p>Explained "Instant Account" benefits in accessible language.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-13.png',
+        title: 'Account funding primer',
+        description: '<p>"Start getting the most out of Robinhood." Emphasized starting with as little as $1.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-14.png',
+        title: 'Funding controls',
+        description: '<p>"Invest at your own pace and on your own budget."</p>'
+      },
+      {
+        image: '../images/onboarding/screen-15.png',
+        title: 'Conclusion',
+        description: '<p>Included gratitude expression. CTA: "explore" to invoke excitement and discovery.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-16.png',
+        title: 'Screen 16',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-17.png',
+        title: 'Screen 17',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-18.png',
+        title: 'Screen 18',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-19.png',
+        title: 'Screen 19',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-20.png',
+        title: 'Screen 20',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-21.png',
+        title: 'Screen 21',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-22.png',
+        title: 'Screen 22',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-23.png',
+        title: 'Screen 23',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-24.png',
+        title: 'Screen 24',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-25.png',
+        title: 'Screen 25',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-26.png',
+        title: 'Screen 26',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-27.png',
+        title: 'Screen 27',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-28.png',
+        title: 'Screen 28',
+        description: '<p>Additional onboarding screen.</p>'
+      },
+      {
+        image: '../images/onboarding/screen-29.png',
+        title: 'Screen 29',
+        description: '<p>Additional onboarding screen.</p>'
+      }
+    ];
+
+    // Carousel functionality (no dots version)
+    function initCarousel(carouselId, screens) {
+      const carousel = document.getElementById(carouselId);
+      if (!carousel || screens.length === 0) return;
+
+      let currentIndex = 0;
+
+      const imageEl = carousel.querySelector('.phone-carousel__image');
+      const counterEl = carousel.querySelector('.phone-carousel__counter');
+      const titleEl = carousel.querySelector('.phone-carousel__title');
+      const descriptionEl = carousel.querySelector('.phone-carousel__description');
+      const prevBtn = carousel.querySelector('.phone-carousel__arrow--prev');
+      const nextBtn = carousel.querySelector('.phone-carousel__arrow--next');
+
+      function updateCarousel() {
+        const screen = screens[currentIndex];
+
+        // Update image
+        imageEl.src = screen.image;
+        imageEl.alt = screen.title;
+
+        // Update content
+        counterEl.textContent = `Screen ${currentIndex + 1} of ${screens.length}`;
+        titleEl.textContent = screen.title;
+        descriptionEl.innerHTML = screen.description;
+      }
+
+      function goTo(index) {
+        currentIndex = (index + screens.length) % screens.length;
+        updateCarousel();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+      // Keyboard navigation
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+      });
+
+      // Initialize
+      updateCarousel();
+    }
+
+    // Initialize carousel
+    initCarousel('onboarding-carousel', onboardingScreens);
+
+    // Password protection
+    const passwordModal = document.getElementById('passwordModal');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordSubmit = document.getElementById('passwordSubmit');
+    const passwordError = document.getElementById('passwordError');
+
+    if (sessionStorage.getItem('workAuthenticated') === 'true') {
+      passwordModal.classList.add('password-modal--hidden');
+    }
+
+    const checkPassword = () => {
+      if (passwordInput.value === 'expelliarmus') {
+        sessionStorage.setItem('workAuthenticated', 'true');
+        passwordModal.classList.add('password-modal--hidden');
+        passwordError.classList.remove('password-modal__error--visible');
+        passwordInput.classList.remove('password-modal__input--error');
+      } else {
+        passwordError.classList.add('password-modal__error--visible');
+        passwordInput.classList.add('password-modal__input--error');
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    };
+
+    passwordSubmit.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    if (!sessionStorage.getItem('workAuthenticated')) {
+      passwordInput.focus();
+    }
   </script>
 </body>
 </html>
