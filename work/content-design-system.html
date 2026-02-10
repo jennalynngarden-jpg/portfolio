@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css?v=5">
 </head>
 <body>
   <!-- Password Modal -->
@@ -17,7 +17,7 @@
       <h2 class="password-modal__title">Password required</h2>
       <input type="password" class="password-modal__input" id="passwordInput" placeholder="Enter password" autocomplete="off">
       <button class="password-modal__button" id="passwordSubmit">Submit</button>
-      <p class="password-modal__error" id="passwordError">Incorrect password. Please try again.</p>
+      <p class="password-modal__error" id="passwordError">Looks like that's not quite right. Try again?</p>
     </div>
   </div>
 
@@ -44,23 +44,488 @@
       <header class="case-study__header">
         <div class="case-study__company">Microsoft AI</div>
         <h1 class="case-study__title">Content design system</h1>
-        <p>Building a scalable content design system for AI experiences, enabling consistent voice, tone, and messaging patterns across Microsoft Copilot products.</p>
+        <p>Building a scalable content design system, enabling consistent voice, tone, and messaging patterns across consumer Copilot.</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Principal Content Designer</span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Engineering</span>
+            <span class="case-study__meta-value">Brand, Model Design, Engineering</span>
           </div>
         </div>
       </header>
 
       <section class="case-study__section">
-        <h2>Overview</h2>
-        <p>Case study content coming soon.</p>
+        <h2>Problem</h2>
+        <p>Before I joined, there were no content standards for consumer Copilot. The voice for in-product copy was varied, inconsistent, and often too formal. Copy was written by PMs, engineers, designers, and marketing folks depending on the part of the product.</p>
+
+        <div class="phone-triple">
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                <img src="../images/content-design-system/sign-in-before.png" alt="Sign in screen before" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">Our sign in screen was stilted and didn't represent the full product value.</p>
+          </div>
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+               <img src="../images/content-design-system/feedback-before.png" alt="Feedback screen before" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">The way we asked for feedback from users was not user-centered.</p>
+          </div>
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                <img src="../images/content-design-system/image-gen-before.png" alt="Banned screen before" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">Sensitive consent flows sounded like they were written by Legal.</p>
+          </div>
+        </div>
       </section>
+
+      <section class="case-study__section">
+        <h2>Solution</h2>
+        <p>I built and now maintain a comprehensive content design system for consumer Copilot:</p>
+        <ul>
+          <li>Audited all product copy to identify inconsistencies and establish a baseline</li>
+          <li>Wrote and socialized comprehensive guidelines on tone of voice, style, perspective, and more</li>
+          <li>Created a SharePoint site for teammates to reference content design standards</li>
+          <li>Converted these guidelines into prompts to power JennaBot, a prompted model + UI that teammates can interact with to get recommendations for their specific context</li>
+        </ul>
+      </section>
+
+      <section class="case-study__section">
+        <h2>My key contributions</h2>
+
+        <h3>Product copy audit</h3>
+        <p>I collaborated with a model designer to audit all in-product copy across consumer Copilot. This helped me learn about responding model prompting and our organizational perspective on Copilot's personality, which was (and still is) very fluid.</p>
+
+        <div class="case-study__centered-image">
+          <img src="../images/content-design-system/product-copy-audit.png" alt="Screenshot of product copy audit FigJam">
+          <p class="case-study__image-caption">Our audit FigJam, which included most high-vis flows.</p>
+        </div>
+
+        <p>From the audit, I identified two glaring issues:</p>
+        <ul>
+          <li><strong>Inconsistent tone:</strong> The tone was very inconsistent, often skewing too formal for a consumer product.</li>
+          <li><strong>Inconsistent perspective:</strong> Some copy was written in first person from Copilot's perspective, some was written from Microsoft's perspective ("we"), and some referred to Copilot in third person</li>
+        </ul>
+
+        <h3>Content standards</h3>
+
+        <h4>Tone of voice principles</h4>
+
+        <p>In partnership with Model Design and Brand, I developed tone of voice principles to guide the updates I was making.</p>
+
+        <div class="content-columns">
+          <div class="content-column">
+            <div class="content-column__header">Guide the journey</div>
+            <div class="content-column__text">Make space to set expectations or explain complex concepts. Always lead with the user benefit, but don't overpromise. Remember that AI is very new for most people.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Keep it conversational</div>
+            <div class="content-column__text">Balance using informal, conversational language with brevity. Incorporate moments of gentle wit that arise from the context and aren't forced.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Go out on a limb</div>
+            <div class="content-column__text">Anticipate what the user needs in a brave, unexpected way. Treat everything they share as precious and proactively offer suggestions or solutions.</div>
+          </div>
+        </div>
+
+        <div class="phone-triple">
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+               <img src="../images/content-design-system/sign-in-after.png" alt="Sign in screen after" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">I helped the user understand why they should sign in by listing specific high-value features.</p>
+          </div>
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                 <img src="../images/content-design-system/feedback-after.png" alt="Feedback screen after" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">I used a more conversational header and listed clear benefits for providing feedback.</p>
+          </div>
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                <img src="../images/content-design-system/image-gen-after.png" alt="Image generation consent after" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">I removed potentially scary language from the image editing consent and made it more conversational.</p>
+          </div>
+        </div>
+
+        <h4>Perspective guidance</h4>
+
+        <p>Some of my most important and evolving content design guidance has been on how we approach perspective in product copy. When I joined, much of the product copy was written in first person because Mustafa (our CEO) believed quite strongly that product copy should be consistent with model responses in both tone and perspective. That was part of why I chose to work most closely with a model designer in my initial audit.</p>
+
+        <p>I initially kept this status-quo while I was getting a lay of the land. However, I found myself making several exceptions to this 1P rule (settings, disclaimers, consents, etc) where user understanding seemed more important than perspective cohesion. Then, in fall 2025 we launched Mico, a character that the user can talk to in Voice mode. Initially, our teams had been referring to Mico as "Copilot's appearance," but an 11th hour naming shift resulted in it being referred to as "Mico"—a nod to "Microsoft Copilot," but ultimately a new entity.</p>
+
+        <div class="monitor-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen monitor-carousel__screen--auto-height">
+              <img src="../images/content-design-system/mico.png" alt="Mico in the Voice UX" class="monitor-carousel__image">
+            </div>
+          </div>
+          <p class="case-study__image-caption">Mico in Voice mode. Some segments of users found that a character like Mico enhanced their experience, even when the underlying voice model was the same.</p>
+        </div>
+
+        <p>In UXR, we were seeing that users were disappointed when Mico presented itself as a version of Copilot. Because its visual appearance implies a distinct personality, they expected it to have its own perspective and were even asking to customize it further, like changing its appearance or giving it their own name.</p>
+
+        <p>However, this choice complicated our 1P perspective approach, because with multiple AI entities under the same umbrella, it became unclear who was speaking when we used "I." Teams internally were looking to me for guidance on how to refer to Copilot or Mico in contexts across the product.</p>  
+
+        <p>So, I wrote and socialized a proposal for how to move forward: default to 3rd person perspective in all contexts outside of the main conversation. I got Mustafa's buy-in on this approach, as he agreed that we needed to be ready to scale toward a future where users come to Copilot to interact with a variety of AI personas for different purposes.</p>
+
+       <div class="case-study__centered-image">
+          <img src="../images/content-design-system/perspective-memo.png" alt="Screenshot of perspective memo">
+          <p class="case-study__image-caption">My memo helped stakeholders understand how we arrived at the current state and why we needed to shift our approach. I included several examples to demonstrate parts of the product where this shift benefited user understanding.</p>
+        </div>
+
+        <p>I ultimately got buy-in from Mustafa and our Head of Product, which then gave me the license to make changes to strings in code to bring existing flows in line with this new guidance.</p>
+
+        <div class="phone-triple">
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                <img src="../images/content-design-system/mico-screen-before.png" alt="Mico screen before" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">This FRE screen was initially from the POV of Copilot.</p>
+          </div>
+          <div class="phone-triple__item">
+            <div class="phone-triple__device">
+              <div class="phone-triple__screen">
+                <img src="../images/content-design-system/mico-screen-after.png" alt="Mico screen after" class="phone-triple__image">
+              </div>
+            </div>
+            <p class="phone-triple__caption">Once we shifted to 3P, it became easier to distinguish between personas.</p>
+          </div>
+        </div>
+
+        <h4>Documentation and socialization</h4>
+        <p>I formalized my principles and guidance into a SharePoint site that I built and socialized internally. The site has 10+ pages covering:</p>
+        <ul>
+          <li>Style and formatting</li>
+          <li>Tone of voice</li>
+          <li>Perspective</li>
+          <li>Terminology</li>
+          <li>Error messages</li>
+          <li>Disclaimers</li>
+          <li>Notifications</li>
+          <li>Conversation starter chips</li>
+          <li>Writing for specific product areas, like Copilot Vision (a high-trust, complex product where Copilot can see the user's screen and give them suggestions on what to do next)</li>
+        </ul>
+        <p>I focused on this effort in my first 6 months after joining to establish a baseline defintion of what high-quality product content looks like.</p>
+
+        <div class="monitor-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen monitor-carousel__screen--auto-height">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/AgtKKslUpe0?autoplay=1&mute=1&loop=1&playlist=AgtKKslUpe0" title="Content Design SharePoint walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <p class="case-study__image-caption">I tried to distribute this SharePoint far and wide.</p>
+        </div>
+
+        <h3>Building JennaBot</h3>
+
+        <p>Creating documentation is half the battle—arguably the larger challenge is getting people to actually read it. Once I felt I had established an acceptable baseline, I then shifted my focus to embedding content design tooling in existing design workflows. I think I'm very much still at the start of this effort, but here's what I've done so far:</p>
+      
+      <p>I made friends with a designer who was more engineering-inclined, and she helped me build JennaBot—a prompted model and UI that teammates would be able to interact with more seamlessly.</p>
+
+    <div class="monitor-carousel">
+          <div class="monitor-carousel__device">
+            <div class="monitor-carousel__screen monitor-carousel__screen--auto-height">
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/f5EpIcvBi90?autoplay=1&mute=1&loop=1&playlist=f5EpIcvBi90" title="JennaBot demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <p class="case-study__image-caption">JennaBot is accessible via an internal link, so it's behind Microsoft auth. It includes a brief onboarding screen that I designed and then the user inputs their context. It then runs the relevant prompts in the background and gives them 3 options to choose from.</p>
+        </div>
+
+    <p>My designer friend Ji built the initial UI, and then I wrote the 11 prompts that power it in the background. The prompts align with the Copilot design system.</p>
+    
+    <p>In Feb 2026, we configured JennaBot to be an Azure container app so it doesn't have dependencies on any other teams or tools. Previously, we had housed the code in an Infra team's repo and needed their engineers to deploy any changes. Now, Ji and I contribute to our own repo when we want to make improvements—although mine are generally mostly written by Claude. 😄</p>
+
+      <div class="case-study__centered-image">
+          <img src="../images/content-design-system/jennabot-repo.png" alt="Screenshot of the JennaBot repo">
+          <p class="case-study__image-caption">The JennaBot GH repo</p>
+        </div>  
+
+  <h4>Prompt structure</h4>
+
+  <p>I wrote a main system prompt that runs every time, and then I conditionally injected the appropriate sub-prompt for the design system component that the user selected.</p>
+
+  <p>To achieve more consistent instruction-following, I frontloaded the model's role and main workflow at the top of the system prompt and reiterated it at the end to take advantage of primacy and recency effects. In each sub-prompts, I also added a bolded "REMEMBER" block that reiterates key constraints to the model. Each sub-prompt has few-shot examples with clear context.</p>
+
+  <p>Here are some excerpts of JennaBot prompts:</p>
+
+        <div class="prompt-diagram prompt-diagram--preview-open">
+          <div class="prompt-diagram__visual">
+            <div class="prompt-diagram__main prompt-diagram__main--active" data-prompt="main">
+              <span class="prompt-diagram__filename">prompt.hbs</span>
+              <div class="prompt-diagram__main-label">Main System Prompt</div>
+              <span class="prompt-diagram__expand-hint">Preview</span>
+            </div>
+
+            <div class="prompt-diagram__arrow">↓</div>
+            <div class="prompt-diagram__inject-label">Conditionally injected based on user input</div>
+
+            <div class="prompt-diagram__partials">
+              <div class="prompt-diagram__partial" data-prompt="dialog">
+                <span class="prompt-diagram__filename">dialog_sheet.hbs</span>
+                <span class="prompt-diagram__expand-hint">Preview</span>
+              </div>
+              <div class="prompt-diagram__partial" data-prompt="settings">
+                <span class="prompt-diagram__filename">settings.hbs</span>
+                <span class="prompt-diagram__expand-hint">Preview</span>
+              </div>
+              <div class="prompt-diagram__partial" data-prompt="disclaimer">
+                <span class="prompt-diagram__filename">disclaimer.hbs</span>
+                <span class="prompt-diagram__expand-hint">Preview</span>
+              </div>
+              <div class="prompt-diagram__more">+7 more</div>
+            </div>
+          </div>
+
+          <div class="prompt-diagram__preview-container">
+            <div class="prompt-diagram__preview prompt-diagram__preview--visible" id="preview-main">
+              <div class="prompt-diagram__preview-header">
+                <span class="prompt-diagram__preview-filename">prompt.hbs</span>
+                <button class="prompt-diagram__preview-close">×</button>
+              </div>
+              <pre class="prompt-diagram__preview-code">You are a UX content expert for Copilot, Microsoft's AI companion. Write UI text that is kind, smart, and conversational.
+
+# Your Task
+
+{{#unless (eq contentType "other")}}
+Generate content for a **{{contentType}}** component.
+
+**Context**: {{context}}
+{{else}}
+Generate content for a **{{customComponent}}** component.
+
+**Context**: {{context}}
+{{/unless}}
+
+---
+
+# Instructions
+
+Follow these steps in order:
+
+## Step 1: Understand the context
+- What is the user trying to accomplish in this moment?
+- Where does this fit in the broader Copilot experience?
+- Is this for a new user (needs explanation) or existing user (moving quickly)?
+
+## Step 2: Apply component guidelines
+- Review the "Content Guidelines" section below for your specific component
+- Note character limits, formatting rules, and tone considerations
+- Follow the output format exactly
+
+## Step 3: Generate three options
+Create three well-crafted options that:
+- Are clear and conversational
+- Vary slightly in tone or structure
+- Provide meaningful choice without being wildly different
+
+## Step 4: Return JSON only
+- Format as a JSON array matching the component structure
+- Return **only** the array—no extra text or markdown</pre>
+            </div>
+            <div class="prompt-diagram__preview" id="preview-dialog">
+              <div class="prompt-diagram__preview-header">
+                <span class="prompt-diagram__preview-filename">dialog_sheet.hbs</span>
+                <button class="prompt-diagram__preview-close">×</button>
+              </div>
+              <pre class="prompt-diagram__preview-code">## Dialogs and Sheets
+
+Dialogs (web) and sheets (mobile) interrupt the workflow to demand user attention. Be **clear, concise, and respectful of time**.
+
+### Core Guidelines
+
+- **Scannable**: Short headers, subheaders that clarify the choice
+- **CTA alignment**: Primary and secondary CTAs should be clear inverses. Match header language.
+- **No redundant secondary**: Skip if there's only one way forward
+
+{{#if (eq contentType "confirmations")}}
+### Confirmations
+
+Double-checks before destructive or consequential actions.
+
+**Examples**: deleting a page, opening unverified links, stopping in-progress actions.
+
+#### Guidance
+
+- **Header**: Plain language question describing the action ("Delete this page?"). Mirror the triggering CTA.
+- **Subheader**: Expand on outcome if not redundant. Mention permanence: "This will &lt;consequence&gt;. This can't be undone."
+- **CTAs**: Primary = continuing (match header language). Secondary = cancel.
+- **Tone**: Match severity. Calm for minor; direct for destructive. Never alarmist.
+
+#### Example
+
+Context: "Dialog asking user to double-check a URL before opening an unverified link."
+
+```json
+[
+  {
+    "header": "Open this link?",
+    "subheader": "Double-check the URL before opening this link to make sure it's a site that you trust: &lt;URL&gt;",
+    "primaryButton": "Open link",
+    "secondaryButton": "Cancel"
+  }
+]
+```</pre>
+            </div>
+            <div class="prompt-diagram__preview" id="preview-settings">
+              <div class="prompt-diagram__preview-header">
+                <span class="prompt-diagram__preview-filename">settings.hbs</span>
+                <button class="prompt-diagram__preview-close">×</button>
+              </div>
+              <pre class="prompt-diagram__preview-code">## Settings
+
+Controls that let users adjust their experience or data usage.
+
+### Guidelines
+
+- **Third person**: Settings control system behavior, not Copilot's perspective.
+- **Tone**: Neutral, factual—no marketing language. Accuracy and clarity above all.
+
+### Structure
+
+- **Header**: Concise, scannable. Sentence case, no punctuation. ≤5 words.
+- **Subheader**: Clear description of what the setting configures. Expand on header, don't restate. Describe what happens when toggle is ON. Avoid negations. ≤100 characters (only break if absolutely necessary). Use punctuation.
+- **Setting Options**: Toggle (on/off) or dropdown (multiple options).
+  - **Dropdown options**: Parallel structure, short (≤4 words), mutually exclusive. Consistent verb tense. Plain terms for conditionals ("Always," "Ask every time," "Never").
+
+### Examples
+
+Context: "Setting to opt in/out of Copilot Actions in Edge. Uses Edge profile information."
+
+```json
+[
+  {
+    "header": "Browser actions",
+    "subheader": "Copilot can browse the web and complete tasks using your Edge profile info.",
+    "settingOptions": "toggle"
+  }
+]
+```
+
+Context: "Setting for clearing composer text when opening Copilot from another app. 3 options: always allow, ask every time, never allow."
+
+```json
+[
+  {
+    "header": "Allow redirects from other apps",
+    "subheader": "When you open Copilot from another app or notification, any unsent messages could be cleared.",
+    "settingOptions": "dropdown"
+  }
+]
+```
+
+---
+
+**REMEMBER**: Header ≤5 words. Subheader ≤100 chars. Third person. No marketing language.</pre>
+            </div>
+            <div class="prompt-diagram__preview" id="preview-disclaimer">
+              <div class="prompt-diagram__preview-header">
+                <span class="prompt-diagram__preview-filename">disclaimer.hbs</span>
+                <button class="prompt-diagram__preview-close">×</button>
+              </div>
+              <pre class="prompt-diagram__preview-code">## Disclaimers
+
+Communicate Copilot's limitations and warn of potential issues with informative, neutral tone.
+
+### Guidelines
+
+- **Brief**: Concise so users actually read them. Long disclaimers may mitigate legal risk on paper but don't serve users.
+- **7th grade reading level**: No formal language or advanced vocabulary. Easy to understand.
+- **Third person**: "Copilot may make mistakes" (not "I may make mistakes").
+- **"Copilot," not "AI"**: Users talk to Copilot or Mico, not "AI." Use "Copilot" as the subject.
+1
+### Examples
+
+Context: "Disclaimer for Copilot Vision about mistakes and screenshot saving. Warn about sensitive info."
+1
+```json
+[
+  {
+    "disclaimer": "Copilot may make mistakes. It saves screenshots, so avoid sharing sensitive info."
+  }
+]
+```
+
+Context: "Disclaimer for sharing dialog. Link isn't private, check for sensitive info in image."
+
+```json
+[
+  {
+    "disclaimer": "Anyone with this link can view and share this image. Double-check for sensitive info."
+  }
+]
+```
+
+---
+
+**REMEMBER**: Brief. Third person. "Copilot" not "AI". 7th grade reading level.</pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+<p>Within JennaBot, I embedded a link to my office hours workflow, where teams can sign up for a 30-minute working session with me. I am embedded in a specific product team, but I host 4 slots of office hours per week for teams I don't support to get my eyes on things. That has helped establish content design as a function and give me more visibility across teams, although admittedly most of the time my bandwidth still feels pretty stretched.</p>
+
+<section class="case-study__section">
+ <h2>Outcomes</h2>
+  <p>This system hasn't been perfect, but as the only content designer on the team I've tried to focus more on progress.</p>
+
+      <div class="outcome-box">
+          <div class="outcome-box__metric">~30 weekly active users</div>
+          <div class="outcome-box__label">of JennaBot (The Copilot Design Team is ~25 ICs, for reference)</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">~100 JennaBot sessions / mo</div>
+          <div class="outcome-box__label">Monthly average from Nov 2025-Jan 2026</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">200 office hours sessions</div>
+          <div class="outcome-box__label">from Feb 2025-Feb 2026</div>
+        </div>
+      </section>
+
+      <section class="case-study__section"></section>
+      <h2>Future plans</h2>
+
+      <p>The main limiting factor in making these happen is my bandwidth, but these are my hopes and dreams.</p>
+
+       <div class="content-columns">
+          <div class="content-column">
+            <div class="content-column__header">JennaBot prompt iteration</div>
+            <div class="content-column__text">Continue expanding JennaBot prompt coverage and refining outputs—maybe by running proper machine evals at some point.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__header">Figma plugin</div>
+            <div class="content-column__text">My teammates have requested this so JennaBot can have richer context and be embedded directly in their workflow.</div>
+          </div>
+          <div class="content-column">
+            <div class="content-column__heade3r">Github workflow</div>
+            <div class="content-column__text">In our codebases, all product copy strings live in JSON files. I'd like to add a Github workflow that reviews all additions to these files against prompts and comments on PRs.</div>
+          </div>
+        </div>
+        </section>
 
       <!-- Case Study Navigation -->
       <nav class="case-study__nav">
@@ -80,7 +545,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <p class="footer__text">&copy; 2026 Jenna Garden</p>
         <ul class="footer__links">
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
@@ -130,6 +595,53 @@
     if (!sessionStorage.getItem('workAuthenticated')) {
       passwordInput.focus();
     }
+
+    // Prompt diagram expand/collapse
+    const promptDiagram = document.querySelector('.prompt-diagram');
+
+    document.querySelectorAll('[data-prompt]').forEach(el => {
+      el.addEventListener('click', () => {
+        const promptId = el.dataset.prompt;
+        const preview = document.getElementById('preview-' + promptId);
+        const isVisible = preview.classList.contains('prompt-diagram__preview--visible');
+
+        // Close all previews first
+        document.querySelectorAll('.prompt-diagram__preview').forEach(p => {
+          p.classList.remove('prompt-diagram__preview--visible');
+        });
+        document.querySelectorAll('[data-prompt]').forEach(p => {
+          p.classList.remove('prompt-diagram__partial--active');
+          p.classList.remove('prompt-diagram__main--active');
+        });
+
+        // Toggle clicked one
+        if (!isVisible) {
+          preview.classList.add('prompt-diagram__preview--visible');
+          promptDiagram.classList.add('prompt-diagram--preview-open');
+          if (el.classList.contains('prompt-diagram__main')) {
+            el.classList.add('prompt-diagram__main--active');
+          } else {
+            el.classList.add('prompt-diagram__partial--active');
+          }
+        } else {
+          promptDiagram.classList.remove('prompt-diagram--preview-open');
+        }
+      });
+    });
+
+    // Close buttons
+    document.querySelectorAll('.prompt-diagram__preview-close').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const preview = btn.closest('.prompt-diagram__preview');
+        preview.classList.remove('prompt-diagram__preview--visible');
+        promptDiagram.classList.remove('prompt-diagram--preview-open');
+        document.querySelectorAll('[data-prompt]').forEach(p => {
+          p.classList.remove('prompt-diagram__partial--active');
+          p.classList.remove('prompt-diagram__main--active');
+        });
+      });
+    });
   </script>
 </body>
 </html>
