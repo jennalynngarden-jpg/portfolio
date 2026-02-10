@@ -1167,7 +1167,8 @@ p {
   margin: 2rem 0;
 }
 
-.case-study__centered-image img {
+.case-study__centered-image img,
+.case-study__centered-image video {
   max-width: 100%;
   border-radius: 0.5rem;
 }
@@ -1242,11 +1243,26 @@ p {
   aspect-ratio: 16 / 10;
 }
 
+.monitor-carousel__screen--auto-height {
+  aspect-ratio: auto;
+}
+
 .monitor-carousel__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+.monitor-carousel__screen--auto-height .monitor-carousel__image,
+.monitor-carousel__screen--auto-height video {
+  height: auto;
+  object-fit: contain;
+}
+
+.monitor-carousel__screen video {
+  width: 100%;
+  display: block;
 }
 
 .monitor-carousel__controls {
@@ -1461,6 +1477,359 @@ p {
   .phone-comparison {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Three-Phone Display with Captions
+   -------------------------------------------------------------------------- */
+.phone-triple {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.phone-triple__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.phone-triple__device {
+  position: relative;
+  width: 180px;
+  height: 368px;
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 6px;
+  box-shadow:
+    0 0 0 1px #333,
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.phone-triple__device::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 16px;
+  background: #000;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.phone-triple__screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.phone-triple__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.phone-triple__image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9CA3AF;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.phone-triple__caption {
+  font-size: 0.8rem;
+  color: #6B7280;
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 180px;
+}
+
+@media (max-width: 640px) {
+  .phone-triple {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .phone-triple__device {
+    width: 160px;
+    height: 326px;
+  }
+
+  .phone-triple__caption {
+    max-width: 160px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Prompt Structure Diagram
+   -------------------------------------------------------------------------- */
+.prompt-diagram {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.prompt-diagram__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  transition: all 0.3s ease;
+}
+
+.prompt-diagram--preview-open .prompt-diagram__visual {
+  flex: 0 0 40%;
+  max-width: 280px;
+}
+
+.prompt-diagram__main {
+  background: #1F2937;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  width: 100%;
+}
+
+.prompt-diagram__main:hover {
+  background: #374151;
+}
+
+.prompt-diagram__main:hover .prompt-diagram__expand-hint {
+  color: #D1D5DB;
+}
+
+.prompt-diagram__main--active {
+  background: #374151;
+  box-shadow: 0 0 0 2px #3B82F6;
+}
+
+.prompt-diagram__filename {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.85rem;
+  display: block;
+}
+
+.prompt-diagram__main-label {
+  font-size: 0.7rem;
+  color: #9CA3AF;
+  margin-top: 0.25rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.prompt-diagram__expand-hint {
+  display: block;
+  font-size: 0.6rem;
+  color: #9CA3AF;
+  margin-top: 0.4rem;
+  opacity: 1;
+  transition: color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prompt-diagram__arrow {
+  color: #6B7280;
+  font-size: 1.25rem;
+}
+
+.prompt-diagram__inject-label {
+  font-size: 0.75rem;
+  color: #6B7280;
+  font-style: italic;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.prompt-diagram__partials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px dashed #D1D5DB;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.prompt-diagram--preview-open .prompt-diagram__partials {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.prompt-diagram__partial {
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.prompt-diagram__partial .prompt-diagram__filename {
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.prompt-diagram__partial:hover {
+  background: #E5E7EB;
+  border-color: #D1D5DB;
+}
+
+.prompt-diagram__partial:hover .prompt-diagram__expand-hint {
+  color: #6B7280;
+}
+
+.prompt-diagram__partial .prompt-diagram__expand-hint {
+  font-size: 0.55rem;
+  margin-top: 0.3rem;
+  color: #9CA3AF;
+}
+
+.prompt-diagram__partial--active {
+  background: #DBEAFE;
+  border-color: #3B82F6;
+}
+
+.prompt-diagram__more {
+  background: #EDE9FE;
+  color: #5B21B6;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Preview container */
+.prompt-diagram__preview-container {
+  flex: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.prompt-diagram--preview-open .prompt-diagram__preview-container {
+  flex: 1;
+  width: auto;
+}
+
+.prompt-diagram__preview {
+  display: none;
+  background: #1E1E1E;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.prompt-diagram__preview--visible {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.prompt-diagram__preview-header {
+  background: #2D2D2D;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prompt-diagram__preview-filename {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.prompt-diagram__preview-close {
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.prompt-diagram__preview-close:hover {
+  color: #fff;
+}
+
+.prompt-diagram__preview-code {
+  padding: 1rem;
+  max-height: 350px;
+  overflow-y: auto;
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  color: #D4D4D4;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .prompt-diagram {
+    flex-direction: column;
+  }
+
+  .prompt-diagram--preview-open .prompt-diagram__visual {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .prompt-diagram__partials {
+    flex-direction: row;
+  }
+
+  .prompt-diagram--preview-open .prompt-diagram__partials {
+    flex-direction: row;
+  }
+
+  .prompt-diagram__preview-container {
+    width: 100%;
+  }
+
+  .prompt-diagram--preview-open .prompt-diagram__preview-container {
+    flex: none;
   }
 }
 
