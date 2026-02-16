@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Growing Robinhood Gold | Jenna Garden</title>
+    <link rel="icon" type="image/png" href="../images/bufo-flower-favicon.png">
   <meta name="description" content="Case study: Growth experiments to increase deposits and Gold subscribers at Robinhood">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,7 @@
       <header class="case-study__header">
         <div class="case-study__company">Robinhood</div>
         <h1 class="case-study__title">Growing Robinhood Gold</h1>
-        <p>Robinhood Gold is a $5/month membership offering interest on uninvested cash and advanced investing tools. I designed and tested growth experiments that substantially increased Gold subscribers and deposits.</p>
+        <p>Robinhood Gold is a $5/month membership offering interest on uninvested cash and advanced investing tools. I designed growth experiments that substantially increased Gold subscribers and deposits.</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
@@ -59,35 +60,23 @@
 
       <section class="case-study__section">
         <h2>Problem</h2>
-        <p>Gold is Robinhood’s paid premium membership. For $5 a month, customers can earn interest on uninvested cash, access premium research and data, and utilize other investing-related benefits. Historically, Robinhood has struggled to effectively market and grow Robinhood Gold in its product surfaces.</p>
+        <p>Robinhood had struggled to effectively market and grow Robinhood Gold in its product surfaces. Gold membership growth had been stagnating.</p>
       </section>
 
       <section class="case-study__section">
         <h2>Strategy</h2>
         <p>I aligned on these core principles with my product design partner:</p>
         <ol>
-          <li><strong>Focus on gen-pop value prop:</strong> Emphasize competitive interest rates on uninvested cash as the primary appeal of Gold.</li>
-          <li><strong>Meet people in context:</strong> Integrate upsells naturally into core user journeys, like funding their account.</li>
-          <li><strong>Make value tangible:</strong> Use earnings projections to help users understand concrete benefits.</li>
+          <li><strong>Focus on gen-pop value prop:</strong> The features included in the Gold membership weren't universally appealing. The competitive interest rate on uninvested cash was by far the most popular and easy-to-understand benefit, so we focused on finding the right way to communicate the value of that benefit.</li>
+          <li><strong>Meet people in context:</strong> Integrate upsells naturally into core user journeys, like account funding.</li>
+          <li><strong>Make value tangible:</strong> We leaned into leveraging earnings projections to help users quickly understand the value of Gold in a concrete way. This required a lot of negotiation with Legal and Compliance, but the results ended up being worth it.</li>
         </ol>
-
-        <figure class="case-study__image">
-          <img src="../images/robinhood-gold/strategy-screenshot-1.png" alt="Strategy principle 1: Focus on gen-pop value prop">
-        </figure>
-
-        <figure class="case-study__image">
-          <img src="../images/robinhood-gold/strategy-screenshot-2.png" alt="Strategy principle 2: Meet people in context">
-        </figure>
-
-        <figure class="case-study__image">
-          <img src="../images/robinhood-gold/strategy-screenshot-3.png" alt="Strategy principle 3: Make value tangible">
-        </figure>
       </section>
 
       <section class="case-study__section">
         <h2>Process</h2>
-        <p>I led a workshop establishing a growth design process playbook with structured steps: hypothesis definition, experiment design, stakeholder management, and documentation and socialization.</p>
-        <p>The circular process emphasizes that analysis directly influences subsequent prioritization. Timeline: 2-3 weeks from conception to implementation.</p>
+        <p>When I joined in the fall of 2023, the growth design team hadn't formalized processes for hypothesis definition, experiment design, stakeholder management, and experiment documentation. I led a workshop with designers across all the Growth teams and then summarized the takeaways from it into a growth design process playbook. This playbook served as an anchor for teams learning to operate in this model and a key onboarding resource for new designers.</p>
+        <p>I visualized this process as a circle because the latter steps of experiment analysis, documentation, and socialization typically directly influence the team's subsequent prioritization decision for the next experiment. In the playbook, I wrote up detailed guidance for each step of the process using my experience from being on the team and learnings from the <a href="https://www.growthdesigners.co/school" target="_blank" rel="noopener">Growth Design course</a> I took in spring 2024.</p>
 
         <figure class="case-study__image case-study__image--no-shadow">
           <img src="../images/robinhood-gold/growth-design-process.png" alt="Growth design process diagram">
@@ -95,118 +84,120 @@
       </section>
 
       <section class="case-study__section">
-        <h2>Experiment 1: Gold native funding upsell</h2>
-        <p><strong>Hypothesis:</strong> Integrating the Gold upsell within the funding step rather than after would increase adoption by contextualizing deposit benefits at deposit time.</p>
+        <h2>Experiments</h2>
+        <h3>Gold native funding upsell</h3>
+        <p>Previous attempts to integrate a Gold upsell into new user onboarding had yielded some incremental success, but we knew that we could drive a lot more impact in such a high-intent flow.</p>
 
-        <h3>Variants tested</h3>
-        <ul>
-          <li><strong>Variant 1:</strong> Repurposed selector design, post-deposit positioning</li>
-          <li><strong>Variant 2:</strong> Moved upsell pre-deposit with contextual messaging about upcoming deposit</li>
-        </ul>
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/onboarding-flow-structure.png" alt="Existing new user onboarding flow structure">
+          <figcaption class="case-study__image-caption">Existing new user onboarding flow structure</figcaption>
+        </figure>
 
-        <div class="phone-carousel" id="funding-upsell-carousel">
-          <div class="phone-carousel__device-wrapper">
-            <div class="phone-carousel__device">
-              <div class="phone-carousel__screen">
-                <img src="../images/robinhood-gold/native-funding-upsell-v1.png" alt="Variant 1" class="phone-carousel__image">
-              </div>
-            </div>
-            <div class="phone-carousel__dots"></div>
-            <div class="phone-carousel__arrows">
-              <button class="phone-carousel__arrow phone-carousel__arrow--prev" aria-label="Previous screen">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button class="phone-carousel__arrow phone-carousel__arrow--next" aria-label="Next screen">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="phone-carousel__content">
-            <div class="phone-carousel__counter">Screen 1 of 3</div>
-            <h3 class="phone-carousel__title">Variant 1</h3>
-            <div class="phone-carousel__description">
-              <p>Repurposed selector design, post-deposit positioning</p>
-            </div>
-          </div>
-        </div>
+        <p>Our onboarding flow is structured into different sections that all begin with these chapter header screens. The steps are all pretty functional and in-line with industry standards for a brokerage onboarding flow. The team had previously chosen to slot the Gold upsell after the funding flow, since that made it the last step before the user entered the app.</p>
 
-        <h3>Outcomes</h3>
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/previous-gold-upsell.jpg" alt="Previous Gold upsell design">
+        </figure>
+
+        <p>The previous team had boiled down the Gold upsell in onboarding to a more functional choice. Right after a user would make their first deposit, they'd "choose their interest rate." This had been the most successful of the previous iterations, resulting in a 40% lift to Gold adoption in this flow.</p>
+        <p>In a team brainstorm, I had the idea to find a placement for the Gold upsell <em>within</em> the funding step in onboarding, since this would more contextually present a deposit-related benefit (earning interest) at the moment of making a deposit.</p>
+
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/funding-flow.png" alt="Funding flow within onboarding">
+          <figcaption class="case-study__image-caption">Our funding flow within onboarding. Chapter header ➡️ Expectation-setting screen ➡️ Bank linking ➡️ Deposit step</figcaption>
+        </figure>
+
+        <p><strong>Hypothesis:</strong> If we tie the Gold upsell more closely to funding, more users will sign up for Gold.</p>
+
+        <h4>Variant 1</h4>
+        <p>First, my product designer suggested leveraging the existing placement, but not segmenting the Gold upsell off with a separate chapter header. Since we had seen previous success with the selector design, she suggested repurposing it, but making modifications to make it feel more contextual within this flow.</p>
+
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/variant-1-iteration.png" alt="Variant 1 iteration">
+        </figure>
+
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/native-funding-upsell-v1.png" alt="Native funding upsell variant 1">
+        </figure>
+
+        <p>We arrived at this design for the first variant. The center-aligned text and progress bar make it feel like it's still a part of the funding flow, but it uses the same selector design from the previous experiment. The subheader content also highlights the amount they just deposited.</p>
+
+        <h4>Variant 2</h4>
+        <p>However, I had been trying to think about the funding flow and Gold upsell holistically as an information experience, and I suspected that post-deposit still wasn't the right moment, even if the design felt more native. We were asking users to opt in to a membership that offered significant deposit-related benefits, like APY and FDIC insurance, but we were doing it <em>after</em> they had already put money into Robinhood.</p>
+        <p>Funding is also our highest-friction part of onboarding, so more people would see the upsell if we moved it earlier, before the user has to make the often-difficult decision of deciding how much to deposit.</p>
+
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/variant-2-iteration.png" alt="Variant 2 iteration">
+        </figure>
+
+        <p>The selector design, however, didn't make sense pre-deposit—you can't ask users to choose an interest rate for money they haven't deposited yet—so I designed this second variant, which reuses existing patterns from the funding flow. The design itself is pretty unremarkable, but I tried to make the content feel contextual by telling users why they're seeing this now ("you're about to make your first deposit on Robinhood—want to take advantage of these deposit-related benefits we have?").</p>
+
+        <figure class="case-study__image case-study__image--no-shadow">
+          <img src="../images/robinhood-gold/native-funding-upsell-v2.png" alt="Native funding upsell variant 2">
+        </figure>
+
+        <h4>Outcomes</h4>
+        <p>This experiment ended up being our biggest win of the half!</p>
+
         <div class="outcome-box">
           <div class="outcome-box__metric">+110%</div>
-          <div class="outcome-box__label">increase in Gold adoption (statistically significant). Neutral churn rates compared to other upsell channels. Directional increase in first-time deposit amounts.</div>
+          <div class="outcome-box__label">increase in Gold adoption. Variant 2 drove a stat-sig increase of +110% in incremental Gold signups! It also drove a directional increase in first-time deposit amount.</div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="outcome-box__metric">Neutral churn</div>
+          <div class="outcome-box__label">We were concerned that these results were a result of users not being aware of the fact that they're signing up for Gold, but we observed that users who signed up for Gold through this upsell didn't churn at greater rates than users who signed up through other upsells.</div>
         </div>
       </section>
 
       <section class="case-study__section">
-        <h2>Experiment 2: Gold earnings calculator for Gold members</h2>
-        <p><strong>Objective:</strong> Reinforce new members' decision and encourage larger initial deposits.</p>
-        <p><strong>Hypothesis:</strong> Displaying potential earnings during the deposit step would result in larger deposits.</p>
+        <h3>Gold earnings calculator for Gold members</h3>
+        <p>After the success we saw with our experiment refining the Gold upsell in onboarding, we wanted to explore ways we could immediately reinforce that the user made a good decision and encourage larger deposits in onboarding.</p>
+        <p><strong>Hypothesis:</strong> If we contextually highlight how much Gold members will earn with Gold's deposit-related benefits during the deposit step, they'll make larger deposits.</p>
 
-        <h3>Design</h3>
-        <p>Contextual banner below deposit input showing combined potential earnings from interest + deposit boost, with additional disclosure below.</p>
-
-        <figure class="case-study__image">
+        <figure class="case-study__image case-study__image--no-shadow">
           <img src="../images/robinhood-gold/earnings-calculator.png" alt="Gold earnings calculator for Gold members">
         </figure>
 
-        <h3>Outcomes</h3>
+        <p>We debated the design here a lot, but ultimately decided on this contextual banner below the text input because it was the least disruptive to the overall structure of the screen. We combined the potential earnings from interest and our 1% deposit boost feature (which has since been deprecated) since they both were deposit-related benefits that would increase in value based on the size of the deposit. Legal and Compliance were pushing us to separate the two numbers, since APY and deposit boost were technically two different programs, but I was concerned that this would be harder to read and less impactful than highlighting one combined figure. We were able to compromise and show a combined number as long as we spelled out the split between deposit boost and APY below.</p>
+        <p>I labeled the earnings amount as "Potential Gold earnings" as a concession to Legal and Compliance, who required a lot of convincing to get this design over the line. The calculation was an annual projection, and since it was based on a lot of assumptions I worked with them to align on what disclosure needed to be on the screen, and what disclosure could be behind a tap. I focused on communicating the constraints of the design (we couldn't have more than 3 lines of disclosure text directly on the screen) and working with them to make the disclosure as conversational and concise as possible.</p>
+
+        <h4>Outcomes</h4>
         <div class="outcome-box">
-          <div class="outcome-box__metric">+3% to +7%</div>
-          <div class="outcome-box__label">net deposit increase for users with $1K+ linked (statistically significant)</div>
+          <div class="outcome-box__metric">+3-7%</div>
+          <div class="outcome-box__label">increased net deposits for users with more than $1K in their linked bank account (statistically significant)</div>
         </div>
 
         <div class="outcome-box">
-          <div class="outcome-box__metric">+5% to +10%</div>
-          <div class="outcome-box__label">net deposit increase for users with $2K+ linked. Results replicated after feature deprecation.</div>
+          <div class="outcome-box__metric">+5-10%</div>
+          <div class="outcome-box__label">increased net deposits for users with more than $2K in their account. We had to re-run the experiment after we deprecated the 1% deposit boost feature, but we were able to replicate the positive results we observed in the first version of the experiment.</div>
         </div>
       </section>
 
       <section class="case-study__section">
-        <h2>Experiment 3: Gold earnings calculator for non-Gold members</h2>
-        <p><strong>Hypothesis:</strong> Surfacing earnings projections post-transfer would drive Gold adoption among existing users making substantial deposits.</p>
+        <h3>Gold earnings calculator for non-Gold members</h3>
+        <p>Since we saw so much success with making the value of Gold tangible in the previous experiment, we wanted to see if we could extend this strategy to drive Gold signups as well. However, because our onboarding upsell was performing so well, we took a closer look at the deposit flow for existing users instead.</p>
+        <p>The deposit input screen design in the transfers flow was much different than in onboarding, so we didn't have the real estate to insert the same banner and disclosure we had designed previously. The transfers flow was also much more sensitive than onboarding because it's a higher-traffic flow, so the team that owned it didn't want us making any major changes within the flow that might harm their metrics.</p>
+        <p>Ultimately, my product designer and I decided to use a contextual bottom sheet that would appear after the user had completed their transfer. We also wanted to make sure we were showing this message only when it would be relevant to users, so we segmented the audience based on a user's deposit amount. We decided to only show the bottom sheet if a user deposited an amount that hit the "Gold breakeven point"—the amount at which the user would "break even" with interest income on the $5 monthly fee (around $1,100 at the time). This ensured that we were showing the Gold upsell to the users it was most relevant to, and not spamming users who wouldn't get value out of Gold.</p>
+        <p><strong>Hypothesis:</strong> If we surface a Gold earnings projection to users who just made a sizable deposit, more of these users will adopt Gold.</p>
 
-        <h3>Design strategy</h3>
-        <ul>
-          <li>Contextual bottom sheet appearing after transfer completion</li>
-          <li>Audience segmentation: shown only to users depositing at/above "breakeven point" (~$1,100)</li>
-          <li>Content focuses on Gold "paying for itself" through earned interest</li>
-          <li>CTAs: "Earn with Gold" (primary) and "Continue without Gold"</li>
-        </ul>
-
-        <figure class="case-study__image">
+        <figure class="case-study__image case-study__image--no-shadow">
           <img src="../images/robinhood-gold/earnings-calculator-non-gold.png" alt="Gold earnings calculator for non-Gold members">
         </figure>
 
-        <h3>Key design considerations</h3>
-        <p><strong>Legal & Compliance Challenges:</strong> Extensive negotiation required for earnings projections. Required hedging language: "could earn," "may make sense," "potentially." Disclosure management balanced promissory concerns with user clarity.</p>
-        <p><strong>Content Testing:</strong> Unmoderated surveys tested "pays for itself" framing. Found excessive cognitive load; simplified messaging tested instead. Value-based CTAs consistently outperformed.</p>
+        <p>In terms of the content design, I worked with user research to design an unmoderated survey and test a different content variant that explained how Gold could "pay for itself" since the user would out-earn the $5 monthly fee. However, we observed in the responses that it was creating too much cognitive load and mental math for users, so I ultimately went with this more straightforward message in the experiment.</p>
+        <p>Again, because we were relying on an annual earnings projection, Legal and Compliance were wary of being too promissory here. I balanced adding in hedging language ("you could earn", "may make sense for you," "potentially") to assuage their concerns while still being clear about the user benefit. For the CTAs, we've learned over several experiments that value-based CTAs consistently perform better, so the primary CTA "Earn with Gold" aligns with that strategy. "Continue without Gold" dismisses the bottom sheet and allows the user to progress through the rest of the transfer flow.</p>
 
-        <h3>Outcomes</h3>
+        <h4>Outcomes</h4>
         <div class="outcome-box">
           <div class="outcome-box__metric">+3.49%</div>
-          <div class="outcome-box__label">in Gold adoption (statistically significant)</div>
+          <div class="outcome-box__label">in Gold adoption. This was statistically significant.</div>
         </div>
 
         <div class="outcome-box">
           <div class="outcome-box__metric">+0.91%</div>
-          <div class="outcome-box__label">in incremental net deposits (directional, not significant)</div>
+          <div class="outcome-box__label">in incremental net deposits. We drove a slight increase in users' deposit amounts after seeing this upsell. This was directionally positive, but not statistically significant.</div>
         </div>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Key learnings</h2>
-        <ul>
-          <li><strong>Defining your hypothesis at the outset is important</strong> — you can use it as an anchor throughout the project</li>
-          <li><strong>Growth design requires strategy development alongside iterative testing</strong></li>
-          <li>Compliance integration as a design constraint requiring creative solutions</li>
-          <li>Audience segmentation for relevance</li>
-          <li>Value-forward messaging and CTAs consistently outperform</li>
-          <li>Context-native placements over disruptive overlays</li>
-        </ul>
       </section>
 
       <!-- Case Study Navigation -->
@@ -224,7 +215,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <p class="footer__text">&copy; 2025 Jenna Garden</p>
+        <p class="footer__text">&copy; 2026 Jenna Garden</p>
         <ul class="footer__links">
           <li><a href="../index.html" class="footer__link">About</a></li>
           <li><a href="../work.html" class="footer__link">Work</a></li>
@@ -241,93 +232,6 @@
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('nav__links--open');
     });
-
-    // Phone Carousel Data - Native Funding Upsell
-    const fundingUpsellScreens = [
-      {
-        image: '../images/robinhood-gold/native-funding-upsell-v1.png',
-        title: 'Variant 1',
-        description: '<p>Repurposed selector design, post-deposit positioning</p>'
-      },
-      {
-        image: '../images/robinhood-gold/native-funding-upsell-context.png',
-        title: 'Context',
-        description: '<p>Moved the upsell within the funding flow to contextualize deposit benefits</p>'
-      },
-      {
-        image: '../images/robinhood-gold/native-funding-upsell-v2.png',
-        title: 'Variant 2 (Winner)',
-        description: '<p>Pre-deposit positioning with contextual messaging about upcoming deposit. This variant achieved +110% Gold adoption.</p>'
-      }
-    ];
-
-    // Carousel functionality
-    function initCarousel(carouselId, screens) {
-      const carousel = document.getElementById(carouselId);
-      if (!carousel || screens.length === 0) return;
-
-      let currentIndex = 0;
-
-      const imageEl = carousel.querySelector('.phone-carousel__image');
-      const counterEl = carousel.querySelector('.phone-carousel__counter');
-      const titleEl = carousel.querySelector('.phone-carousel__title');
-      const descriptionEl = carousel.querySelector('.phone-carousel__description');
-      const dotsContainer = carousel.querySelector('.phone-carousel__dots');
-      const prevBtn = carousel.querySelector('.phone-carousel__arrow--prev');
-      const nextBtn = carousel.querySelector('.phone-carousel__arrow--next');
-
-      // Generate dots
-      dotsContainer.innerHTML = screens.map((_, i) =>
-        `<button class="phone-carousel__dot ${i === 0 ? 'phone-carousel__dot--active' : ''}" data-index="${i}" aria-label="Go to screen ${i + 1}"></button>`
-      ).join('');
-
-      const dots = dotsContainer.querySelectorAll('.phone-carousel__dot');
-
-      function updateCarousel() {
-        const screen = screens[currentIndex];
-
-        // Update image
-        imageEl.src = screen.image;
-        imageEl.alt = screen.title;
-
-        // Update content
-        counterEl.textContent = `Screen ${currentIndex + 1} of ${screens.length}`;
-        titleEl.textContent = screen.title;
-        descriptionEl.innerHTML = screen.description;
-
-        // Update dots
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('phone-carousel__dot--active', i === currentIndex);
-        });
-      }
-
-      function goTo(index) {
-        currentIndex = (index + screens.length) % screens.length;
-        updateCarousel();
-      }
-
-      // Event listeners
-      prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-      nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          goTo(parseInt(dot.dataset.index));
-        });
-      });
-
-      // Keyboard navigation
-      carousel.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
-        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
-      });
-
-      // Initialize
-      updateCarousel();
-    }
-
-    // Initialize carousel
-    initCarousel('funding-upsell-carousel', fundingUpsellScreens);
 
     // Password protection
     const passwordModal = document.getElementById('passwordModal');

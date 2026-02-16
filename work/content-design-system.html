@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Content Design System | Jenna Garden</title>
+    <link rel="icon" type="image/png" href="../images/bufo-flower-favicon.png">
   <meta name="description" content="Case study: Scalable content design for AI experiences at Microsoft.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,7 +241,7 @@
 
         <p>Creating documentation is half the battle—arguably the larger challenge is getting people to actually read it. Once I felt I had established an acceptable baseline, I then shifted my focus to embedding content design tooling in existing design workflows. I think I'm very much still at the start of this effort, but here's what I've done so far:</p>
       
-      <p>I made friends with a designer who was more engineering-inclined, and she helped me build JennaBot—a prompted model and UI that teammates would be able to interact with more seamlessly.</p>
+      <p>I made friends with a designer who was more engineering-inclined, and she helped me get a repo set up for JennaBot—a prompted model and UI that teammates would be able to interact with more seamlessly.</p>
 
     <div class="monitor-carousel">
           <div class="monitor-carousel__device">
@@ -251,13 +252,13 @@
           <p class="case-study__image-caption">JennaBot is accessible via an internal link, so it's behind Microsoft auth. It includes a brief onboarding screen that I designed and then the user inputs their context. It then runs the relevant prompts in the background and gives them 3 options to choose from.</p>
         </div>
 
-    <p>My designer friend Ji built the initial UI, and then I wrote the 11 prompts that power it in the background. The prompts align with the Copilot design system.</p>
+    <p>My designer friend built the initial UI, and then I wrote the 10+ prompts that power it in the background. The prompts align with the Copilot design system.</p>
     
-    <p>In Feb 2026, we configured JennaBot to be an Azure container app so it doesn't have dependencies on any other teams or tools. Previously, we had housed the code in an Infra team's repo and needed their engineers to deploy any changes. Now, Ji and I contribute to our own repo when we want to make improvements—although mine are generally mostly written by Claude. 😄</p>
+    <p>In Feb 2026, we configured JennaBot to be an Azure container app so it doesn't have dependencies on any other teams or tools. Previously, we had housed the code in an Infra team's repo and needed their engineers to deploy any changes. Now, my teammate and I contribute to our own repo when we want to make improvements.</p>
 
       <div class="case-study__centered-image">
           <img src="../images/content-design-system/jennabot-repo.png" alt="Screenshot of the JennaBot repo">
-          <p class="case-study__image-caption">The JennaBot GH repo</p>
+          <p class="case-study__image-caption">The JennaBot GH repo, with sensitive details redacted.</p>
         </div>  
 
   <h4>Prompt structure</h4>
@@ -578,7 +579,7 @@ Context: "Disclaimer for sharing dialog. Link isn't private, check for sensitive
         sessionStorage.setItem('workAuthenticated', 'true');
         passwordModal.classList.add('password-modal--hidden');
         passwordError.classList.remove('password-modal__error--visible');
-        passwordInput.classList.remove('password-modal__input--error');
+        passwordInput.classList.remove('passwo1rd-modal__input--error');
       } else {
         passwordError.classList.add('password-modal__error--visible');
         passwordInput.classList.add('password-modal__input--error');
