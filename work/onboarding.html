@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onboarding Redesign | Jenna Garden</title>
+  <title>Onboarding redesign | Jenna Garden</title>
     <link rel="icon" type="image/png" href="../images/bufo-flower-favicon.png">
   <meta name="description" content="Case study: Restructured the Robinhood onboarding flow with refreshed visuals and content aligned to 2022 brand identity standards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,16 +44,16 @@
     <div class="container container--narrow">
       <header class="case-study__header">
         <div class="case-study__company">Robinhood</div>
-        <h1 class="case-study__title">Onboarding Redesign</h1>
+        <h1 class="case-study__title">Onboarding redesign</h1>
         <p>Restructured the onboarding flow with refreshed visuals and content aligned to 2022 brand identity standards.</p>
         <div class="case-study__meta">
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Role</span>
-            <span class="case-study__meta-value">Senior Content Designer</span>
+            <span class="case-study__meta-value">Content Design</span>
           </div>
           <div class="case-study__meta-item">
             <span class="case-study__meta-label">Team</span>
-            <span class="case-study__meta-value">Product, Design, Engineering, Legal, Compliance</span>
+            <span class="case-study__meta-value">Product, Product Design, Engineering, Legal, Compliance</span>
           </div>
         </div>
       </header>
@@ -71,18 +71,18 @@
       <section class="case-study__section">
         <h2>My role</h2>
         <p>I drove UX content design, solicited and responded to stakeholder feedback, secured Legal and Compliance approvals, and communicated implementation details to frontend engineering.</p>
-        <p>I joined this project late, after the visual design was already locked. Despite this constraint, content changes still yielded measurable impact.</p>
+        <p>I was brought into this project later than I would’ve liked. The onboarding team had been operating without content design support for a few months at that point, so the product designer had forged ahead and the visual design + structure of the screens were pretty much locked by the time I got involved. While this isn’t my ideal working model, it was still a challenge to define how we wanted to introduce our product offering and properly set expectations for a long flow. I saw that content can still have an impact, even later in the design process.</p>
       </section>
 
       <section class="case-study__section">
-        <h2>Screen walkthrough</h2>
+        <h2>Designs</h2>
         <p>I worked through every screen in the onboarding flow, ensuring copy was clear, aligned to brand voice, and addressed user needs at each step.</p>
 
         <div class="phone-carousel phone-carousel--no-dots" id="onboarding-carousel">
           <div class="phone-carousel__device-wrapper">
             <div class="phone-carousel__device">
               <div class="phone-carousel__screen">
-                <img src="../images/onboarding/screen-1.png" alt="Welcome screen" class="phone-carousel__image">
+                <img src="../images/onboarding-redesign/welcome+screen.png" alt="Welcome screen" class="phone-carousel__image">
               </div>
             </div>
             <div class="phone-carousel__arrows">
@@ -99,18 +99,13 @@
             </div>
           </div>
           <div class="phone-carousel__content">
-            <div class="phone-carousel__counter">Screen 1 of 29</div>
+            <div class="phone-carousel__counter">Screen 1 of 28</div>
             <h3 class="phone-carousel__title">Welcome</h3>
             <div class="phone-carousel__description">
               <p>Overview of Robinhood offerings: "invest, spend, and put your money in motion."</p>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="case-study__section">
-        <h2>Key learning</h2>
-        <p>Even when joining a project late with visual design already locked, content design can still drive meaningful, measurable impact. This project reinforced the importance of content as a lever for improving user experience.</p>
       </section>
 
       <section class="case-study__section">
@@ -167,149 +162,144 @@
     // ONBOARDING CAROUSEL
     const onboardingScreens = [
       {
-        image: '../images/onboarding/screen-1.png',
+        image: '../images/onboarding-redesign/welcome+screen.png',
         title: 'Welcome',
-        description: '<p>Overview of Robinhood offerings: "invest, spend, and put your money in motion."</p>'
+        description: '<p><strong>Content goal:</strong> Invite the customer in and give them a high-level overview of what Robinhood has to offer without getting too specific.</p><p><strong>Implementation:</strong> "Welcome to Robinhood" greets the user and aligns with the illustration welcoming them into an imaginary city. "invest, spend, and put your money in motion" nods to how Robinhood is an access brand and calls out our investing and spending products.</p>'
       },
       {
-        image: '../images/onboarding/screen-2.png',
+        image: '../images/onboarding-redesign/Value+prop+1.png',
         title: 'Investing value prop',
-        description: '<p>Prioritized stocks, business news, and educational resources. Emphasized: "It\'s never been easier..."</p>'
+        description: '<p><strong>Content goal:</strong> Give the customer an overview of our investing products. Avoid mentioning crypto for compliance reasons.</p><p><strong>Implementation:</strong> Mentioned stocks first, since that\'s what people know Robinhood for. There\'s also a large segment of active users who just use Robinhood to read business news, so prioritized mentioning that second. Then I called out Robinhood\'s educational resources to appeal to newer investors and signal that we can support them. Robinhood tries to position itself as the best place for beginners, so I drove this home with "It\'s never been easier…"</p>'
       },
       {
-        image: '../images/onboarding/screen-3.png',
+        image: '../images/onboarding-redesign/Value+prop+2.png',
         title: 'Access value prop',
-        description: '<p>Key message: "Start with just $1." Subheader challenged assumptions about minimums and commissions.</p>'
+        description: '<p><strong>Content goal:</strong> A lot of customers come into Robinhood with a trial mentality, so I wanted to emphasize that it doesn\'t take much to get started to help them take that first step.</p><p><strong>Implementation:</strong> "Start with just $1" is concise and conveniently fits on one line, which is great with the longer disclosure text above the CTAs. Tried to make the tone in the subheader lighter with "Account minimums? Commissions? Never heard of them." Emphasized how the customer is in control with the second sentence of the subheader.</p>'
       },
       {
-        image: '../images/onboarding/screen-4.png',
+        image: '../images/onboarding-redesign/Value+prop+3.png',
         title: 'Safety value prop',
-        description: '<p>Featured "Safety first" company value. Highlighted encryption, two-factor authentication, and 24/7 support.</p>'
+        description: '<p><strong>Content goal:</strong> Start to build customer trust by explaining the safeguards that we have in place. Our net promoter score took a hit during 2021 due to trading restrictions, outages, and data leaks, so it\'s important to emphasize how we\'ve invested in security and safety measures upfront.</p><p><strong>Implementation:</strong> "Safety first" is actually one of our company values that we\'ve repeated a lot in external messaging. "We\'ve got your back" helps strike a casual tone. Mentioned security measures we\'ve implemented recently ("encryption and two-factor authentication"). "24/7 in-app phone support for all issues" was a huge launch for us last year, so I wanted to make sure that was featured here as well. "we\'re here to help" is how our customer support agents typically close their emails, so it seemed fitting to tie that in here.</p>'
       },
       {
-        image: '../images/onboarding/screen-5.png',
+        image: '../images/onboarding-redesign/Create+login.png',
         title: 'Create login',
-        description: '<p>"You\'ll use this login to access Robinhood next time."</p>'
+        description: '<p><strong>Content goal:</strong> We called these screens "chapter headers" because they group each section of the flow. The overall goal for each one is to set expectations for what the customer will do in that section of the flow and contribute to a sense of progress. For this section, the customer is just going to enter their email, preferred password, and legal name.</p><p><strong>Implementation:</strong> "Create login" encapsulates the first 2 steps of this section of the flow. I couldn\'t say "Create account" because I wanted to future-proof for when Robinhood will offer multiple accounts that the customer will be able to access with one login. "You\'ll use this login to access Robinhood next time" signals to the customer that they should keep this information handy for the next time they log in.</p>'
       },
       {
-        image: '../images/onboarding/screen-6.png',
-        title: 'Identity verification chapter',
-        description: '<p>"Help us" imperative framing. Emphasized legal requirements and security.</p>'
+        image: '../images/onboarding-redesign/Input+email.png',
+        title: 'Input email',
+        description: '<p><strong>Content goal:</strong> I wanted all of the steps in each section to be consistently phrased as an imperative or a question so it was clear what we were asking of the customer. Where applicable, I also wanted to give the customer insight into why we were asking these questions.</p><p><strong>Implementation:</strong> Some of our questions—like asking for the customer\'s email address—are pretty self-explanatory. The subheader here sets expectations for how the customer will use their email the next time they log in.</p>'
       },
       {
-        image: '../images/onboarding/screen-7.png',
-        title: 'Phone verification',
-        description: '<p>"We\'ll send you a six-digit code."</p>'
+        image: '../images/onboarding-redesign/Create+password.jpg',
+        title: 'Create password',
+        description: '<p><strong>Content goal:</strong> Make it as easy as possible for the customer to choose a password.</p><p><strong>Implementation:</strong> Using "Choose" as the verb here helps the customer know that we\'re asking them to come up with something new. Ideally we would\'ve used the subheader space to provide guidance on any requirements (i.e. how many special characters they need), but we actually didn\'t have any. 😅</p>'
       },
       {
-        image: '../images/onboarding/screen-8.png',
+        image: '../images/onboarding-redesign/Verify+identity.png',
+        title: 'Verify identity',
+        description: '<p><strong>Content goal:</strong> Signal to the customer that we\'re going to ask them to fill out a lot of information for legal reasons, and that it\'s all in the name of keeping their account secure. We don\'t want the customer to feel like we\'re suspicious of them, so we should communicate that this is all pretty standard stuff.</p><p><strong>Implementation:</strong> "Help us" makes the header an imperative, which is consistent across all of these chapter header screens. In past UX research, we\'ve observed that customers are generally understanding when we mention that we\'re collecting information for legal reasons, so I figured it would be good to lead with that in the subheader. I also tried to give them some insight into the "why" here—it "helps us know it\'s you when you log in to Robinhood" and "It\'s all about keeping your account safe."</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Phone+number.jpg',
+        title: 'Phone number',
+        description: '<p><strong>Content goal:</strong> Ask the user for their phone number and set expectations for what will happen next as we verify their phone number.</p><p><strong>Implementation:</strong> Reframed the header as a question. "We\'ll send you a six-digit code" tells the customer what to look out for. "It expires…" lets them know that it\'s time-sensitive.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Verification+code+entry.jpg',
+        title: 'Verification code entry',
+        description: '<p><strong>Content goal:</strong> Instruct the user to enter their verification code.</p><p><strong>Implementation:</strong> Used "Enter" imperative for header. Reiterated what just happened in the subheader. Used text below input field to help users re-send the code if they didn\'t receive it.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Phone+verification+success+state.jpg',
+        title: 'Phone verification success',
+        description: '<p><strong>Content goal:</strong> Let customers know that their phone verification was successful.</p><p><strong>Implementation:</strong> We were previously using a generic message ("Success!") for the header, so I rewrote it to specifically reflect the action that the customer took. The subheader sets expectations about how the customer will need to take this action again if they ever reset their phone number.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Input+legal+name.jpg',
+        title: 'Input legal name',
+        description: '<p><strong>Content goal:</strong> Help the customer understand what we\'re asking them to input at this step.</p><p><strong>Implementation:</strong> "as they appear on your government ID" clarifies that this should be the name that the US government knows them by. I also had to work with Legal and Compliance to add button bar text with links to our T&C and privacy policy, since account creation technically happens after the customer proceeds past this screen.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Date+of+birth.jpg',
+        title: 'Date of birth',
+        description: '<p><strong>Content goal:</strong> Prompt the customer to input their date of birth and let them know why we\'re asking about it.</p><p><strong>Implementation:</strong> Like other similar screens in this flow, I used the subheader space to reiterate why we\'re asking for their date of birth. I also continued to use contractions ("What\'s") to help strike a more conversational tone.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Residential+address.jpg',
+        title: 'Residential address',
+        description: '<p><strong>Content goal:</strong> Prompt the customer to provide their residential address.</p><p><strong>Implementation:</strong> "residential" carries the weight of communicating that this is the address where the customer lives. Since this is a pretty sensitive piece of personal info, I reused the same subheader from previous screens to reiterate that this question is required by law.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Citizenship.jpg',
+        title: 'Citizenship',
+        description: '<p><strong>Content goal:</strong> Have the customer tell us where they have citizenship.</p><p><strong>Implementation:</strong> This screen previously had a generic header ("Citizenship"), but I reframed it as a question to strengthen the conversational tone of this flow and create parity across questions.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/SSN+primer.jpg',
         title: 'SSN primer',
-        description: '<p>Addressed three customer concerns via bullet points. Focused on information protection and credit score impact.</p>'
+        description: '<p><strong>Content goal:</strong> According to our user research, out of all the pieces of personal info, SSN is the most sensitive. The goal of this screen was to prepare the customer to input it by explaining why we ask for it and how we keep it safe.</p><p><strong>Implementation:</strong> Kept the header more generic ("Verify your identity" instead of "Provide your SSN") to focus the screen on why we\'re asking for SSN. The subheader is more specific about which federal law requires us to collect this information, so the customer can research it on their own if that helps them feel better. The three bullet points address common concerns we heard from customers around how their information would be protected and if providing it would impact their credit score. Even though providing SSN is a pretty standard part of opening a bank or brokerage account, we wanted to design for the customer who hadn\'t done this before and would have questions.</p>'
       },
       {
-        image: '../images/onboarding/screen-9.png',
-        title: 'Investment questions',
-        description: '<p>Combined multiple regulatory questions. Avoided misusing terminology like "investment profile."</p>'
+        image: '../images/onboarding-redesign/SSN.jpg',
+        title: 'SSN',
+        description: '<p><strong>Content goal:</strong> Prompt the customer to input their SSN.</p><p><strong>Implementation:</strong> Our hope was that the trust-building on the previous screen would make this step easier for the customer, but just in case I used the subheader to reiterate the required nature of this step.</p>'
       },
       {
-        image: '../images/onboarding/screen-10.png',
-        title: 'Insider trading flag',
-        description: '<p>Acknowledged technical language complexity. Positioned "No" as default answer.</p>'
+        image: '../images/onboarding-redesign/Investor+profile.png',
+        title: 'Investor profile',
+        description: '<p><strong>Content goal:</strong> Get the customer ready to answer a series of investing-related questions.</p><p><strong>Implementation:</strong> These questions didn\'t fit neatly into one category. Internally, the team called this the "investment profile" section because it includes one investment profile question (the investment profile is a specific set of investing-related questions that regulators require us to ask once the customer has an approved brokerage account), but I wanted us to be more encompassing with how we were grouping these questions so we weren\'t misusing terminology. I made the header more vague ("questions about investing") and tried to summarize themes from the 4 questions in the subheader. And once again, I reiterated that this section is also required by law.</p>'
       },
       {
-        image: '../images/onboarding/screen-11.png',
+        image: '../images/onboarding-redesign/Investing+experience.jpg',
+        title: 'Investing experience',
+        description: '<p>This screen wasn\'t in scope to change for this project. However, I did work on another project where we had the opportunity to revise this question.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Employment.jpg',
+        title: 'Employment',
+        description: '<p>This question also wasn\'t in scope to change for this project.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Affiliated+person.jpg',
+        title: 'Affiliated person',
+        description: '<p><strong>Content goal:</strong> Ask the customer if they\'re affiliated with a stock exchange or brokerage firm.</p><p><strong>Implementation:</strong> Clarified in the header that even having a family member who is a brokerage affiliate is relevant. However, I used the subheader to reiterate again that this is not the norm and flipped the CTAs so that "No" was positioned as the default answer.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Insider+trading+question.jpg',
+        title: 'Insider trading question',
+        description: '<p><strong>Content goal:</strong> Ask the customer if they have any large stake in a publicly-traded company. This question is required by insider trading laws.</p><p><strong>Implementation:</strong> We had to use a lot of technical words in the header, so I used the space in the subheader to help reassure the customer that if they aren\'t sure what the header means, they likely don\'t have to worry about this question. We also positioned "No" as the default answer by making it the primary CTA, since that\'s what most people answer here.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Agreements.jpg',
+        title: 'Agreements',
+        description: '<p><strong>Content goal:</strong> Prime the user to see a series of legal agreements.</p><p><strong>Implementation:</strong> Used a more active verb ("Review") instead of something more passive to note to the customer that we encourage taking the time to look over the agreements carefully. "important details" signals to the customer that this is a step they should pause on.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Tax+certification+1.png',
         title: 'Tax certification',
-        description: '<p>Translated legal jargon to plain language. Highlighted key terms like "W-9."</p>'
+        description: '<p><strong>Content goal:</strong> Provide a high-level summary of what this legal agreement is to build trust with customers.</p><p><strong>Implementation:</strong> Highlighted another term ("W-9") that customers may associate with this agreement. Explained the purpose of the agreement in plain language.</p>'
       },
       {
-        image: '../images/onboarding/screen-12.png',
-        title: 'Brokerage agreement',
-        description: '<p>Explained "Instant Account" benefits in accessible language.</p>'
+        image: '../images/onboarding-redesign/Brokerage+application+agreement+1.png',
+        title: 'Brokerage application agreement',
+        description: '<p><strong>Content goal:</strong> Summarize the purpose of this agreement to cut through the legal jargon and build trust with customers.</p><p><strong>Implementation:</strong> Flagged to the customer that there will be links to a lot of disclosure documents in this agreement. Highlighted that a significant section of the agreement would focus on explaining how a particular account type works to surface key terms ("Instant Account") upfront.</p>'
       },
       {
-        image: '../images/onboarding/screen-13.png',
+        image: '../images/onboarding-redesign/Funding.jpg',
+        title: 'Funding',
+        description: '<p><strong>Content goal:</strong> Encourage the customer to deposit money into their account.</p><p><strong>Implementation:</strong> User research showed that our customers are wary about funding their account at this stage of the onboarding journey, but removing this step from the flow wasn\'t in scope for this project. As a lightweight way of addressing this customer pain point, I tried to encourage customers to fund by highlighting how it will benefit them ("start getting the most out of Robinhood") and assuaging any concerns they might have about security, time commitment, or account minimums.</p>'
+      },
+      {
+        image: '../images/onboarding-redesign/Funding+primer.jpg',
         title: 'Account funding primer',
-        description: '<p>"Start getting the most out of Robinhood." Emphasized starting with as little as $1.</p>'
+        description: '<p><strong>Content goal:</strong> Dive into a little more detail to highlight the benefits and address customer concerns around funding during onboarding.</p><p><strong>Implementation:</strong> "Start with as little as $1" is a value prop that has performed extremely well for us, especially in marketing our fractional shares feature. User research has also shown us that newer investors tend to believe that they need a lot of money to get started investing. I tried to reiterate that the customer is in control in the first bullet with "invest at your own pace and on your own budget." In the second bullet, I highlighted our Instant Deposits feature, which lets customers access their funds right away. The SIPC language is pretty boilerplate, but positioning it as "account protection" can help chip away at mistrust that the customer may have in our brand.</p>'
       },
       {
-        image: '../images/onboarding/screen-14.png',
-        title: 'Funding controls',
-        description: '<p>"Invest at your own pace and on your own budget."</p>'
-      },
-      {
-        image: '../images/onboarding/screen-15.png',
-        title: 'Conclusion',
-        description: '<p>Included gratitude expression. CTA: "explore" to invoke excitement and discovery.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-16.png',
-        title: 'Screen 16',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-17.png',
-        title: 'Screen 17',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-18.png',
-        title: 'Screen 18',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-19.png',
-        title: 'Screen 19',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-20.png',
-        title: 'Screen 20',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-21.png',
-        title: 'Screen 21',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-22.png',
-        title: 'Screen 22',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-23.png',
-        title: 'Screen 23',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-24.png',
-        title: 'Screen 24',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-25.png',
-        title: 'Screen 25',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-26.png',
-        title: 'Screen 26',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-27.png',
-        title: 'Screen 27',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-28.png',
-        title: 'Screen 28',
-        description: '<p>Additional onboarding screen.</p>'
-      },
-      {
-        image: '../images/onboarding/screen-29.png',
-        title: 'Screen 29',
-        description: '<p>Additional onboarding screen.</p>'
+        image: '../images/onboarding-redesign/Confirmation.png',
+        title: 'Confirmation',
+        description: '<p>Once the customer has linked their bank account and transferred funds, they\'ll see this screen. (I\'m not including the bank linking and funding screens that precede this because they weren\'t in scope to change for this project.)</p><p><strong>Content goal:</strong> Signal to the customer that they\'ve completed onboarding and express appreciation for choosing us.</p><p><strong>Implementation:</strong> The customer just went through a pretty long flow and trusted us with some of their money, so it felt like a "thank you" was in order. In the subheader, I tried to communicate that everyone is welcome, no matter what their experience level is when it comes to investing. Using "explore" as the primary verb in the CTA invokes excitement and signals that there\'s a lot for the customer to dive into.</p>'
       }
     ];
 
